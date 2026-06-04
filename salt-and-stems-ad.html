@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salt &amp; Stems — Ad Creative (10x)</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --wine:#5a1726;
+  --wine-deep:#3f0f1b;
+  --blush:#f3d9d6;
+  --blush-soft:#f9ecea;
+  --cream:#fbf6f0;
+  --gold:#b9935a;
+  --ink:#2a1118;
+  --muted:#8a6b6f;
+  --rose:#c97a86;
+}
+body{
+  background:#e9e4dc;
+  font-family:'Jost',sans-serif;
+  color:var(--ink);
+  line-height:1.6;
+  padding:48px 20px 80px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1140px;margin:0 auto}
+.kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:var(--wine);margin:6px 0 4px}
+.page-sub{color:var(--muted);font-size:15px;max-width:620px;margin-bottom:44px}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+
+/* ============ THE CREATIVE (1080x1080 feel) ============ */
+.creative-shell{position:sticky;top:32px}
+.creative{
+  position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 80% 8%, rgba(201,122,134,.42) 0%, transparent 42%),
+    radial-gradient(90% 70% at 10% 100%, rgba(185,147,90,.28) 0%, transparent 48%),
+    radial-gradient(140% 120% at 50% 50%, var(--cream) 0%, var(--blush-soft) 62%, var(--blush) 100%);
+  border-radius:14px;
+  box-shadow:0 30px 70px -30px rgba(63,15,27,.55);
+  display:flex;flex-direction:column;
+}
+/* soft floral orbs */
+.orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55;pointer-events:none}
+.orb.a{width:140px;height:140px;background:radial-gradient(circle at 35% 35%,#f4c4cb,#d98a98);top:-30px;right:60px;opacity:.8}
+.orb.b{width:80px;height:80px;background:radial-gradient(circle at 35% 35%,#f7d7b8,#cfa56e);top:70px;right:18px;opacity:.7}
+.orb.c{width:200px;height:200px;background:radial-gradient(circle at 40% 40%,#f6dadd,#e3a7af);bottom:-70px;left:-40px;opacity:.5}
+.orb.d{width:46px;height:46px;background:radial-gradient(circle at 35% 35%,#f4c4cb,#d98a98);bottom:120px;right:48px;opacity:.65}
+
+.creative-inner{position:relative;z-index:2;display:flex;flex-direction:column;height:100%;padding:7% 8% 6.5%}
+
+/* top row: brand + offer pill */
+.c-top{display:flex;justify-content:space-between;align-items:flex-start}
+.brand{font-family:'Cormorant Garamond',serif}
+.brand-name{font-size:clamp(15px,2.1vw,22px);font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--wine)}
+.brand-tag{font-size:clamp(7px,1vw,10px);letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-family:'Jost',sans-serif;font-weight:500;margin-top:3px}
+.offer-pill{
+  background:var(--wine);color:var(--cream);font-size:clamp(7px,1vw,10px);font-weight:600;
+  letter-spacing:1.5px;text-transform:uppercase;padding:7px 12px;border-radius:40px;text-align:center;line-height:1.3;
+  box-shadow:0 8px 20px -8px rgba(90,23,38,.6)
+}
+
+/* center headline block */
+.c-center{flex:1;display:flex;flex-direction:column;justify-content:center;padding:4% 0}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--rose);font-size:clamp(8px,1.1vw,12px);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-bottom:14px}
+.eyebrow::before,.eyebrow::after{content:'';height:1px;flex:1;max-width:40px;background:var(--rose);opacity:.5}
+.headline{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--wine);font-size:clamp(34px,7vw,72px);line-height:.98;letter-spacing:-1px}
+.headline em{font-style:italic;color:var(--rose)}
+.subhead{font-size:clamp(11px,1.7vw,18px);color:var(--ink);max-width:88%;margin:18px auto 0;line-height:1.5;font-weight:300}
+.subhead strong{font-weight:600;color:var(--wine)}
+
+/* social proof */
+.proof{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px}
+.stars{color:var(--gold);letter-spacing:2px;font-size:clamp(11px,1.5vw,16px)}
+.proof-text{font-size:clamp(8px,1.1vw,12px);color:var(--muted);letter-spacing:.5px}
+
+/* bottom: chips + CTA */
+.c-bottom{display:flex;flex-direction:column;gap:14px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:6px 8px;justify-content:center}
+.chip{font-size:clamp(7px,.95vw,10px);letter-spacing:1.5px;text-transform:uppercase;color:var(--wine);border:1px solid rgba(90,23,38,.28);padding:5px 11px;border-radius:40px;background:rgba(255,255,255,.35);font-weight:500}
+.cta-btn{
+  background:var(--wine);color:var(--cream);font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  font-size:clamp(10px,1.4vw,15px);padding:15px 36px;border-radius:50px;
+  box-shadow:0 14px 30px -12px rgba(90,23,38,.7);transition:transform .2s
+}
+.scarcity{font-size:clamp(7px,1vw,11px);color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.scarcity b{color:var(--rose)}
+
+.size-note{text-align:center;font-size:12px;color:var(--muted);margin-top:14px;letter-spacing:1px}
+
+/* ============ RIGHT COLUMN: COPY ============ */
+.panel{background:#fff;border:1px solid #eaddd9;border-radius:14px;padding:30px 32px;margin-bottom:24px;box-shadow:0 10px 30px -22px rgba(90,23,38,.4)}
+.panel h2{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--wine);font-weight:600;margin-bottom:4px}
+.panel .lead{font-size:13px;color:var(--muted);margin-bottom:20px}
+.field{margin-bottom:18px}
+.field:last-child{margin-bottom:0}
+.flabel{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px;display:flex;justify-content:space-between}
+.flabel .count{color:var(--muted);font-weight:400;letter-spacing:.5px}
+.fbox{background:var(--blush-soft);border:1px solid #f0e0dd;border-radius:8px;padding:13px 15px;font-size:14px;line-height:1.6;color:var(--ink)}
+.fbox.headline-box{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--wine)}
+.fbox strong{color:var(--wine)}
+.emoji{font-style:normal}
+
+.variant{border-left:3px solid var(--rose);padding:10px 0 10px 16px;margin-bottom:16px}
+.variant:last-child{margin-bottom:0}
+.variant .vtag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600}
+.variant .vhead{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--wine);font-weight:600;line-height:1.15;margin:2px 0 4px}
+.variant .vwhy{font-size:12px;color:var(--muted)}
+
+.why-list{list-style:none}
+.why-list li{position:relative;padding:9px 0 9px 26px;font-size:13.5px;border-bottom:1px solid #f3e9e6}
+.why-list li:last-child{border-bottom:none}
+.why-list li::before{content:'✦';position:absolute;left:0;top:9px;color:var(--gold)}
+.why-list b{color:var(--wine)}
+
+.footer-note{max-width:1140px;margin:40px auto 0;font-size:12px;color:var(--muted);text-align:center;letter-spacing:.5px}
+
+@media(max-width:880px){
+  .grid{grid-template-columns:1fr;gap:36px}
+  .creative-shell{position:static}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Elevate VA · Paid Social Creative</div>
+  <h1 class="page-title">Salt &amp; Stems — Bloom Bar Ad, Rebuilt</h1>
+  <p class="page-sub">A conversion-first rework of the Meta ad: stronger hook, a real offer, social proof and scarcity, and a frictionless CTA. Open this file and screenshot the square creative at 1080×1080 for the feed.</p>
+
+  <div class="grid">
+    <!-- ============ CREATIVE ============ -->
+    <div class="creative-shell">
+      <div class="creative" id="creative">
+        <div class="orb a"></div><div class="orb b"></div><div class="orb c"></div><div class="orb d"></div>
+        <div class="creative-inner">
+
+          <div class="c-top">
+            <div class="brand">
+              <div class="brand-name">Salt &amp; Stems</div>
+              <div class="brand-tag">CT Shoreline Bloom Bar</div>
+            </div>
+            <div class="offer-pill">Now booking<br>2026 dates</div>
+          </div>
+
+          <div class="c-center">
+            <div class="eyebrow">A bloom bar that comes to you</div>
+            <h1 class="headline">Your guests<br>become the<br><em>florists.</em></h1>
+            <p class="subhead">We roll a styled bloom cart right to your venue — your guests arrange a <strong>bouquet they actually take home.</strong></p>
+            <div class="proof">
+              <span class="stars">★★★★★</span>
+              <span class="proof-text">Loved at 120+ CT Shoreline celebrations</span>
+            </div>
+          </div>
+
+          <div class="c-bottom">
+            <div class="chips">
+              <span class="chip">Weddings</span>
+              <span class="chip">Bridal Showers</span>
+              <span class="chip">Baby Showers</span>
+              <span class="chip">Corporate</span>
+              <span class="chip">Birthdays</span>
+            </div>
+            <div class="cta-btn">Check Your Date →</div>
+            <div class="scarcity">Limited weekends each season · <b>CT Shoreline &amp; surrounding</b></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="size-note">↑ Square creative — export at 1080 × 1080 px (feed) · also crops cleanly to 4:5</div>
+    </div>
+
+    <!-- ============ COPY ============ -->
+    <div>
+      <div class="panel">
+        <h2>Meta Ad Copy</h2>
+        <p class="lead">Drop straight into Ads Manager. Hook is front-loaded for the "see more" cutoff.</p>
+
+        <div class="field">
+          <div class="flabel"><span>Primary Text</span><span class="count">recommended ≤ 125 chars before cut</span></div>
+          <div class="fbox">
+            <strong>Your guests build their own bouquet — and take it home. <span class="emoji">💐</span></strong><br><br>
+            Salt &amp; Stems brings a styled bloom cart right to your venue. Pick your palette, we deliver and style everything, and your guests arrange a keepsake bouquet they'll remember long after the last dance.<br><br>
+            ✦ We deliver, style &amp; clean up — you do nothing<br>
+            ✦ Work with your own florist, or let us source the blooms<br>
+            ✦ Weddings · showers · corporate · birthdays<br>
+            ✦ CT Shoreline &amp; surrounding areas<br><br>
+            📍 Now booking 2026 — weekends fill fast.<br>
+            👉 Comment <strong>BLOOMS</strong> or tap <em>Send Message</em> and we'll check your date today.
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="flabel"><span>Headline</span><span class="count">≤ 40 chars</span></div>
+          <div class="fbox headline-box">Your guests become the florists.</div>
+        </div>
+
+        <div class="field">
+          <div class="flabel"><span>Description</span><span class="count">≤ 30 chars</span></div>
+          <div class="fbox">A bloom bar, delivered to you.</div>
+        </div>
+
+        <div class="field">
+          <div class="flabel"><span>Call-to-Action Button</span></div>
+          <div class="fbox">Send Message <span style="color:var(--muted)">(best for date-check leads)</span> — or <strong>Book Now</strong></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>A/B Hook Variants</h2>
+        <p class="lead">Test these headlines against the control to find your winner.</p>
+        <div class="variant">
+          <div class="vtag">Variant A · Outcome</div>
+          <div class="vhead">"The favor your guests won't leave behind."</div>
+          <div class="vwhy">Reframes the bouquet as a take-home gift — strong for showers &amp; corporate.</div>
+        </div>
+        <div class="variant">
+          <div class="vtag">Variant B · Curiosity</div>
+          <div class="vhead">"There's a flower cart at the party. Here's why."</div>
+          <div class="vwhy">Pattern-interrupt scroll-stopper; pairs well with a candid event photo.</div>
+        </div>
+        <div class="variant">
+          <div class="vtag">Variant C · Specific / Local</div>
+          <div class="vhead">"CT Shoreline brides are booking this for 2026."</div>
+          <div class="vwhy">Adds locality + social proof + urgency in one line. Great for wedding targeting.</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Why This Converts</h2>
+        <ul class="why-list">
+          <li><b>Hook leads with the experience</b>, not the service. "Your guests become the florists" sells the moment; "build your own bouquet" only described the task.</li>
+          <li><b>Clear unique mechanism</b> — a styled cart delivered to the venue — so it doesn't read as "just a florist."</li>
+          <li><b>Social proof</b> (★★★★★ · 120+ celebrations) and <b>scarcity</b> (limited weekends, booking 2026) give a reason to act now.</li>
+          <li><b>One low-friction CTA</b>: comment BLOOMS / Send Message starts a conversation instead of demanding a form.</li>
+          <li><b>High-contrast, mobile-first design</b> — wine on cream reads on a phone at thumb-distance; the old creative was washed out.</li>
+          <li><b>Front-loaded primary text</b> so the value lands before Meta's "…see more" truncation.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-note">Replace ★ count, "120+" and "2026" with the client's real numbers before launch. Swap in a candid photo of an actual cart/event as the background for even stronger performance.</p>
+</div>
+</body>
+</html>
