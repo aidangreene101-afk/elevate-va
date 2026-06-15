@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ed1d24">
-<title>Marvel Timeline Guide</title>
+<title>Marvel Timeline Guide — Complete</title>
 <style>
   :root{
     --marvel-red:#ed1d24;
     --marvel-red-dark:#b1060c;
-    --ink:#10131a;
     --panel:#161a24;
     --panel-2:#1d2230;
     --gold:#f0b323;
@@ -32,13 +31,12 @@
     background-attachment:fixed;
     -webkit-text-size-adjust:100%;
   }
-  .wrap{max-width:880px;margin:0 auto;padding:0 16px 64px;}
+  .wrap{max-width:920px;margin:0 auto;padding:0 16px 72px;}
 
-  /* ---- Comic banner header ---- */
   header.hero{
     position:relative;
-    margin:0 -16px 28px;
-    padding:48px 20px 40px;
+    margin:0 -16px 24px;
+    padding:46px 20px 38px;
     text-align:center;
     background:
       repeating-linear-gradient(45deg, rgba(0,0,0,.12) 0 14px, transparent 14px 28px),
@@ -48,114 +46,81 @@
     overflow:hidden;
   }
   header.hero::before{
-    content:"";
-    position:absolute;inset:0;
+    content:"";position:absolute;inset:0;
     background-image:radial-gradient(rgba(0,0,0,.22) 1.4px, transparent 1.6px);
-    background-size:10px 10px;
-    opacity:.55;
-    pointer-events:none;
+    background-size:10px 10px;opacity:.55;pointer-events:none;
   }
   header.hero h1{
-    position:relative;
-    margin:0;
-    font-size:clamp(34px,9vw,64px);
-    font-weight:900;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:#fff;
+    position:relative;margin:0;
+    font-size:clamp(32px,9vw,62px);font-weight:900;letter-spacing:2px;
+    text-transform:uppercase;color:#fff;
     text-shadow:3px 3px 0 #000, 6px 6px 0 rgba(0,0,0,.25);
   }
   header.hero p{
-    position:relative;
-    margin:10px 0 0;
-    font-size:15px;
-    font-weight:600;
-    letter-spacing:1px;
-    color:#ffe9b0;
-    text-transform:uppercase;
+    position:relative;margin:10px 0 0;font-size:14px;font-weight:600;
+    letter-spacing:1px;color:#ffe9b0;text-transform:uppercase;
   }
 
-  /* ---- Toggle buttons ---- */
-  .toc{
-    display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
-    margin:0 0 26px;
-  }
+  .toc{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:0 0 16px;}
   .toc a{
-    text-decoration:none;
-    background:var(--panel-2);
-    color:var(--text);
-    border:1px solid rgba(255,255,255,.08);
-    padding:9px 16px;border-radius:999px;
-    font-size:13px;font-weight:700;letter-spacing:.5px;
-    box-shadow:0 2px 10px rgba(0,0,0,.3);
+    text-decoration:none;background:var(--panel-2);color:var(--text);
+    border:1px solid rgba(255,255,255,.08);padding:9px 15px;border-radius:999px;
+    font-size:12.5px;font-weight:700;letter-spacing:.4px;box-shadow:0 2px 10px rgba(0,0,0,.3);
   }
   .toc a:hover{border-color:var(--gold);color:var(--gold);}
 
-  h2.section{
-    font-size:clamp(20px,5vw,28px);
-    font-weight:900;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    margin:38px 0 4px;
-    padding-bottom:8px;
-    border-bottom:3px solid var(--marvel-red);
-    display:inline-block;
-  }
-  .note{color:var(--muted);font-size:13px;margin:6px 0 18px;}
+  .legend{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:0 0 26px;font-size:12px;color:var(--muted);}
 
-  /* ---- Chronological table ---- */
-  table{
-    width:100%;border-collapse:collapse;
-    background:rgba(22,26,36,.85);
-    border-radius:12px;overflow:hidden;
-    box-shadow:0 6px 24px rgba(0,0,0,.35);
-    font-size:14px;
+  h2.section{
+    font-size:clamp(19px,5vw,27px);font-weight:900;text-transform:uppercase;
+    letter-spacing:1px;margin:40px 0 4px;padding-bottom:8px;
+    border-bottom:3px solid var(--marvel-red);display:inline-block;
   }
-  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);}
-  th{background:var(--marvel-red-dark);color:#fff;text-transform:uppercase;font-size:12px;letter-spacing:.5px;}
+  .note{color:var(--muted);font-size:13px;margin:6px 0 16px;}
+
+  table{
+    width:100%;border-collapse:collapse;background:rgba(22,26,36,.85);
+    border-radius:12px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.35);font-size:13.5px;
+  }
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);}
+  th{background:var(--marvel-red-dark);color:#fff;text-transform:uppercase;font-size:11.5px;letter-spacing:.5px;}
   tr:last-child td{border-bottom:none;}
-  td.num{color:var(--gold);font-weight:800;width:34px;}
-  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;}
+  td.num{color:var(--gold);font-weight:800;width:30px;}
+
+  .pill{display:inline-block;font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:999px;white-space:nowrap;}
   .pill.movie{background:rgba(240,179,35,.18);color:var(--gold);border:1px solid rgba(240,179,35,.4);}
   .pill.show{background:rgba(99,179,237,.16);color:#8ecbff;border:1px solid rgba(99,179,237,.4);}
+  .pill.animated{background:rgba(110,231,183,.14);color:#6ee7b7;border:1px solid rgba(110,231,183,.4);}
+  .pill.short{background:rgba(255,138,101,.16);color:#ff9e7a;border:1px solid rgba(255,138,101,.4);}
   .pill.special{background:rgba(180,120,255,.16);color:#c9a8ff;border:1px solid rgba(180,120,255,.4);}
 
-  /* ---- Phase / show cards ---- */
   .phase{
-    margin:22px 0;
-    background:rgba(22,26,36,.85);
-    border:1px solid rgba(255,255,255,.07);
-    border-left:5px solid var(--marvel-red);
-    border-radius:12px;
-    padding:6px 18px 14px;
+    margin:20px 0;background:rgba(22,26,36,.85);border:1px solid rgba(255,255,255,.07);
+    border-left:5px solid var(--marvel-red);border-radius:12px;padding:6px 16px 14px;
     box-shadow:0 6px 24px rgba(0,0,0,.3);
   }
-  .phase h3{
-    font-size:18px;text-transform:uppercase;letter-spacing:.5px;
-    color:var(--gold);margin:14px 0 6px;
-  }
+  .phase h3{font-size:17px;text-transform:uppercase;letter-spacing:.5px;color:var(--gold);margin:14px 0 6px;}
   ul.movies{list-style:none;padding:0;margin:0;}
-  ul.movies li{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.07);font-size:14.5px;}
+  ul.movies li{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.07);font-size:14px;}
   ul.movies li:last-child{border-bottom:none;}
-  .yr{color:var(--muted);font-size:13px;}
+  ul.movies li.up{color:var(--muted);}
+  .yr{color:var(--muted);font-size:12.5px;}
+  .tag{font-size:10px;font-weight:800;color:#ffd479;border:1px solid rgba(240,179,35,.5);border-radius:6px;padding:1px 6px;margin-left:6px;}
 
-  details.show{
-    margin:10px 0;border-radius:10px;overflow:hidden;
-    background:var(--panel-2);border:1px solid rgba(255,255,255,.08);
-  }
-  details.show>summary{
-    cursor:pointer;list-style:none;
-    padding:12px 16px;font-weight:800;font-size:15px;
-    display:flex;align-items:center;justify-content:space-between;gap:10px;
-  }
+  details.show{margin:9px 0;border-radius:10px;overflow:hidden;background:var(--panel-2);border:1px solid rgba(255,255,255,.08);}
+  details.show>summary{cursor:pointer;list-style:none;padding:11px 15px;font-weight:800;font-size:14.5px;display:flex;align-items:center;justify-content:space-between;gap:10px;}
   details.show>summary::-webkit-details-marker{display:none;}
   details.show>summary::after{content:"▸";color:var(--gold);transition:transform .2s;}
   details.show[open]>summary::after{transform:rotate(90deg);}
-  details.show ol{margin:0;padding:0 18px 14px 40px;}
-  details.show ol li{padding:4px 0;font-size:14px;color:#dfe4ee;}
-  .epcount{font-weight:600;font-size:12px;color:var(--muted);}
+  details.show .body{padding:0 16px 12px;}
+  details.show h4{margin:10px 0 2px;font-size:12.5px;color:var(--gold);text-transform:uppercase;letter-spacing:.5px;}
+  details.show ol{margin:4px 0 0;padding-left:34px;}
+  details.show ol li{padding:3px 0;font-size:13.5px;color:#dfe4ee;}
+  .epcount{font-weight:600;font-size:11.5px;color:var(--muted);}
+  .sub{color:var(--muted);font-size:12.5px;margin:2px 0 0;}
 
-  footer{margin-top:46px;text-align:center;color:var(--muted);font-size:12.5px;line-height:1.6;}
+  footer{margin-top:46px;text-align:center;color:var(--muted);font-size:12px;line-height:1.7;}
+  footer b{color:#c9d2e3;}
 </style>
 </head>
 <body>
@@ -163,421 +128,390 @@
 
   <header class="hero">
     <h1>Marvel<br>Timeline</h1>
-    <p>Movies &amp; Shows — Episode by Episode</p>
+    <p>The Complete Guide · Movies · Shorts · Shows · Episode by Episode</p>
   </header>
 
   <nav class="toc">
     <a href="#chrono">⏱ Chronological Order</a>
-    <a href="#release">🎬 Release Order + Episodes</a>
+    <a href="#movies">🎬 Movies</a>
+    <a href="#shorts">🎞 One-Shot Shorts</a>
+    <a href="#defenders">📺 Defenders Saga &amp; Agent Carter</a>
+    <a href="#disney">⭐ Disney+ Shows</a>
+    <a href="#animated">🎨 Animation</a>
+    <a href="#specials">🌙 Specials</a>
   </nav>
 
+  <div class="legend">
+    <span class="pill movie">Movie</span>
+    <span class="pill show">Show</span>
+    <span class="pill animated">Animated</span>
+    <span class="pill short">Short</span>
+    <span class="pill special">Special</span>
+  </div>
+
+  <!-- ============ CHRONOLOGICAL ============ -->
   <h2 class="section" id="chrono">Chronological (In-Universe) Order</h2>
-  <p class="note">The order events happen in the story. For full episode lists, see Release Order below.</p>
+  <p class="note">Marvel's official Disney+ "Timeline Order" — everything arranged by when it happens in the story. Episode lists are in the sections below.</p>
   <table>
     <thead><tr><th>#</th><th>Title</th><th>Type</th><th>Setting</th></tr></thead>
     <tbody>
-      <tr><td class="num">1</td><td>Captain America: The First Avenger</td><td><span class="pill movie">Movie</span></td><td>1942–45</td></tr>
-      <tr><td class="num">2</td><td>Captain Marvel</td><td><span class="pill movie">Movie</span></td><td>1995</td></tr>
-      <tr><td class="num">3</td><td>Iron Man</td><td><span class="pill movie">Movie</span></td><td>2010</td></tr>
-      <tr><td class="num">4</td><td>Iron Man 2</td><td><span class="pill movie">Movie</span></td><td>2011</td></tr>
-      <tr><td class="num">5</td><td>The Incredible Hulk</td><td><span class="pill movie">Movie</span></td><td>2011</td></tr>
-      <tr><td class="num">6</td><td>Thor</td><td><span class="pill movie">Movie</span></td><td>2011</td></tr>
-      <tr><td class="num">7</td><td>The Avengers</td><td><span class="pill movie">Movie</span></td><td>2012</td></tr>
-      <tr><td class="num">8</td><td>Iron Man 3</td><td><span class="pill movie">Movie</span></td><td>2012–13</td></tr>
-      <tr><td class="num">9</td><td>Thor: The Dark World</td><td><span class="pill movie">Movie</span></td><td>2013</td></tr>
-      <tr><td class="num">10</td><td>Captain America: The Winter Soldier</td><td><span class="pill movie">Movie</span></td><td>2014</td></tr>
-      <tr><td class="num">11</td><td>Guardians of the Galaxy</td><td><span class="pill movie">Movie</span></td><td>2014</td></tr>
-      <tr><td class="num">12</td><td>Guardians of the Galaxy Vol. 2</td><td><span class="pill movie">Movie</span></td><td>2014</td></tr>
-      <tr><td class="num">13</td><td>Avengers: Age of Ultron</td><td><span class="pill movie">Movie</span></td><td>2015</td></tr>
-      <tr><td class="num">14</td><td>Ant-Man</td><td><span class="pill movie">Movie</span></td><td>2015</td></tr>
-      <tr><td class="num">15</td><td>Captain America: Civil War</td><td><span class="pill movie">Movie</span></td><td>2016</td></tr>
-      <tr><td class="num">16</td><td>Black Widow</td><td><span class="pill movie">Movie</span></td><td>2016</td></tr>
-      <tr><td class="num">17</td><td>Black Panther</td><td><span class="pill movie">Movie</span></td><td>2016</td></tr>
-      <tr><td class="num">18</td><td>Spider-Man: Homecoming</td><td><span class="pill movie">Movie</span></td><td>2016</td></tr>
-      <tr><td class="num">19</td><td>Doctor Strange</td><td><span class="pill movie">Movie</span></td><td>2016–17</td></tr>
-      <tr><td class="num">20</td><td>Thor: Ragnarok</td><td><span class="pill movie">Movie</span></td><td>2017</td></tr>
-      <tr><td class="num">21</td><td>Ant-Man and the Wasp</td><td><span class="pill movie">Movie</span></td><td>2018</td></tr>
-      <tr><td class="num">22</td><td>Avengers: Infinity War</td><td><span class="pill movie">Movie</span></td><td>2018</td></tr>
-      <tr><td class="num">23</td><td>Avengers: Endgame</td><td><span class="pill movie">Movie</span></td><td>2018 &amp; 2023</td></tr>
-      <tr><td class="num">24</td><td>Loki (Seasons 1–2)</td><td><span class="pill show">Show</span></td><td>Outside time</td></tr>
-      <tr><td class="num">25</td><td>WandaVision</td><td><span class="pill show">Show</span></td><td>2023</td></tr>
-      <tr><td class="num">26</td><td>The Falcon and the Winter Soldier</td><td><span class="pill show">Show</span></td><td>2024</td></tr>
-      <tr><td class="num">27</td><td>Shang-Chi and the Legend of the Ten Rings</td><td><span class="pill movie">Movie</span></td><td>2024</td></tr>
-      <tr><td class="num">28</td><td>Eternals</td><td><span class="pill movie">Movie</span></td><td>2024</td></tr>
-      <tr><td class="num">29</td><td>Spider-Man: Far From Home</td><td><span class="pill movie">Movie</span></td><td>2024</td></tr>
-      <tr><td class="num">30</td><td>Hawkeye</td><td><span class="pill show">Show</span></td><td>2024</td></tr>
-      <tr><td class="num">31</td><td>Spider-Man: No Way Home</td><td><span class="pill movie">Movie</span></td><td>2024</td></tr>
-      <tr><td class="num">32</td><td>Moon Knight</td><td><span class="pill show">Show</span></td><td>2025</td></tr>
-      <tr><td class="num">33</td><td>Ms. Marvel</td><td><span class="pill show">Show</span></td><td>2025</td></tr>
-      <tr><td class="num">34</td><td>Doctor Strange in the Multiverse of Madness</td><td><span class="pill movie">Movie</span></td><td>2025</td></tr>
-      <tr><td class="num">35</td><td>Thor: Love and Thunder</td><td><span class="pill movie">Movie</span></td><td>2025</td></tr>
-      <tr><td class="num">36</td><td>She-Hulk: Attorney at Law</td><td><span class="pill show">Show</span></td><td>2025</td></tr>
-      <tr><td class="num">37</td><td>Werewolf by Night</td><td><span class="pill special">Special</span></td><td>2025</td></tr>
-      <tr><td class="num">38</td><td>Black Panther: Wakanda Forever</td><td><span class="pill movie">Movie</span></td><td>2025</td></tr>
-      <tr><td class="num">39</td><td>The Guardians of the Galaxy Holiday Special</td><td><span class="pill special">Special</span></td><td>2025</td></tr>
-      <tr><td class="num">40</td><td>Ant-Man and the Wasp: Quantumania</td><td><span class="pill movie">Movie</span></td><td>2026</td></tr>
-      <tr><td class="num">41</td><td>Guardians of the Galaxy Vol. 3</td><td><span class="pill movie">Movie</span></td><td>2026</td></tr>
-      <tr><td class="num">42</td><td>Secret Invasion</td><td><span class="pill show">Show</span></td><td>2026</td></tr>
-      <tr><td class="num">43</td><td>Echo</td><td><span class="pill show">Show</span></td><td>2026</td></tr>
-      <tr><td class="num">44</td><td>The Marvels</td><td><span class="pill movie">Movie</span></td><td>2026</td></tr>
-      <tr><td class="num">45</td><td>Agatha All Along</td><td><span class="pill show">Show</span></td><td>2026</td></tr>
-      <tr><td class="num">46</td><td>Deadpool &amp; Wolverine</td><td><span class="pill movie">Movie</span></td><td>2026</td></tr>
-      <tr><td class="num">47</td><td>Captain America: Brave New World</td><td><span class="pill movie">Movie</span></td><td>2027</td></tr>
-      <tr><td class="num">48</td><td>Daredevil: Born Again</td><td><span class="pill show">Show</span></td><td>2027</td></tr>
-      <tr><td class="num">49</td><td>Ironheart</td><td><span class="pill show">Show</span></td><td>2027</td></tr>
-      <tr><td class="num">50</td><td>Thunderbolts*</td><td><span class="pill movie">Movie</span></td><td>2027</td></tr>
-      <tr><td class="num">51</td><td>The Fantastic Four: First Steps</td><td><span class="pill movie">Movie</span></td><td>Alt. universe</td></tr>
+      <tr><td class="num">1</td><td>Eyes of Wakanda — S1</td><td><span class="pill animated">Animated</span></td><td>1260 BC+</td></tr>
+      <tr><td class="num">2</td><td>Captain America: The First Avenger</td><td><span class="pill movie">Movie</span></td><td>1942–45</td></tr>
+      <tr><td class="num">3</td><td>One-Shot: Agent Carter</td><td><span class="pill short">Short</span></td><td>1946</td></tr>
+      <tr><td class="num">4</td><td>Agent Carter</td><td><span class="pill show">Show</span></td><td>1946–47</td></tr>
+      <tr><td class="num">5</td><td>The Fantastic Four: First Steps</td><td><span class="pill movie">Movie</span></td><td>1960s (alt.)</td></tr>
+      <tr><td class="num">6</td><td>Captain Marvel</td><td><span class="pill movie">Movie</span></td><td>1995</td></tr>
+      <tr><td class="num">7</td><td>Iron Man</td><td><span class="pill movie">Movie</span></td><td>2010</td></tr>
+      <tr><td class="num">8</td><td>Iron Man 2</td><td><span class="pill movie">Movie</span></td><td>2011</td></tr>
+      <tr><td class="num">9</td><td>The Incredible Hulk</td><td><span class="pill movie">Movie</span></td><td>2011</td></tr>
+      <tr><td class="num">10</td><td>One-Shot: A Funny Thing Happened… Thor's Hammer</td><td><span class="pill short">Short</span></td><td>2011</td></tr>
+      <tr><td class="num">11</td><td>Thor</td><td><span class="pill movie">Movie</span></td><td>2011</td></tr>
+      <tr><td class="num">12</td><td>One-Shot: The Consultant</td><td><span class="pill short">Short</span></td><td>2011</td></tr>
+      <tr><td class="num">13</td><td>The Avengers</td><td><span class="pill movie">Movie</span></td><td>2012</td></tr>
+      <tr><td class="num">14</td><td>One-Shot: Item 47</td><td><span class="pill short">Short</span></td><td>2012</td></tr>
+      <tr><td class="num">15</td><td>Thor: The Dark World</td><td><span class="pill movie">Movie</span></td><td>2013</td></tr>
+      <tr><td class="num">16</td><td>Iron Man 3</td><td><span class="pill movie">Movie</span></td><td>2013</td></tr>
+      <tr><td class="num">17</td><td>Captain America: The Winter Soldier</td><td><span class="pill movie">Movie</span></td><td>2014</td></tr>
+      <tr><td class="num">18</td><td>Guardians of the Galaxy</td><td><span class="pill movie">Movie</span></td><td>2014</td></tr>
+      <tr><td class="num">19</td><td>I Am Groot (shorts)</td><td><span class="pill short">Short</span></td><td>2014+</td></tr>
+      <tr><td class="num">20</td><td>Guardians of the Galaxy Vol. 2</td><td><span class="pill movie">Movie</span></td><td>2014</td></tr>
+      <tr><td class="num">21</td><td>Daredevil — S1</td><td><span class="pill show">Show</span></td><td>2015</td></tr>
+      <tr><td class="num">22</td><td>Jessica Jones — S1</td><td><span class="pill show">Show</span></td><td>2015</td></tr>
+      <tr><td class="num">23</td><td>Avengers: Age of Ultron</td><td><span class="pill movie">Movie</span></td><td>2015</td></tr>
+      <tr><td class="num">24</td><td>Ant-Man</td><td><span class="pill movie">Movie</span></td><td>2015</td></tr>
+      <tr><td class="num">25</td><td>Daredevil — S2</td><td><span class="pill show">Show</span></td><td>2015–16</td></tr>
+      <tr><td class="num">26</td><td>Luke Cage — S1</td><td><span class="pill show">Show</span></td><td>2016</td></tr>
+      <tr><td class="num">27</td><td>Iron Fist — S1</td><td><span class="pill show">Show</span></td><td>2016</td></tr>
+      <tr><td class="num">28</td><td>The Defenders</td><td><span class="pill show">Show</span></td><td>2016</td></tr>
+      <tr><td class="num">29</td><td>Captain America: Civil War</td><td><span class="pill movie">Movie</span></td><td>2016</td></tr>
+      <tr><td class="num">30</td><td>Your Friendly Neighborhood Spider-Man — S1</td><td><span class="pill animated">Animated</span></td><td>2016 (alt.)</td></tr>
+      <tr><td class="num">31</td><td>Black Widow</td><td><span class="pill movie">Movie</span></td><td>2016</td></tr>
+      <tr><td class="num">32</td><td>Black Panther</td><td><span class="pill movie">Movie</span></td><td>2016</td></tr>
+      <tr><td class="num">33</td><td>Spider-Man: Homecoming</td><td><span class="pill movie">Movie</span></td><td>2016</td></tr>
+      <tr><td class="num">34</td><td>The Punisher — S1</td><td><span class="pill show">Show</span></td><td>2016–17</td></tr>
+      <tr><td class="num">35</td><td>Doctor Strange</td><td><span class="pill movie">Movie</span></td><td>2016</td></tr>
+      <tr><td class="num">36</td><td>Jessica Jones — S2</td><td><span class="pill show">Show</span></td><td>2017</td></tr>
+      <tr><td class="num">37</td><td>Luke Cage — S2</td><td><span class="pill show">Show</span></td><td>2017</td></tr>
+      <tr><td class="num">38</td><td>Iron Fist — S2</td><td><span class="pill show">Show</span></td><td>2017</td></tr>
+      <tr><td class="num">39</td><td>Daredevil — S3</td><td><span class="pill show">Show</span></td><td>2018</td></tr>
+      <tr><td class="num">40</td><td>Thor: Ragnarok</td><td><span class="pill movie">Movie</span></td><td>2017</td></tr>
+      <tr><td class="num">41</td><td>The Punisher — S2</td><td><span class="pill show">Show</span></td><td>2018</td></tr>
+      <tr><td class="num">42</td><td>Jessica Jones — S3</td><td><span class="pill show">Show</span></td><td>2019</td></tr>
+      <tr><td class="num">43</td><td>Ant-Man and the Wasp</td><td><span class="pill movie">Movie</span></td><td>2018</td></tr>
+      <tr><td class="num">44</td><td>Avengers: Infinity War</td><td><span class="pill movie">Movie</span></td><td>2018</td></tr>
+      <tr><td class="num">45</td><td>Avengers: Endgame</td><td><span class="pill movie">Movie</span></td><td>2018 → 2023</td></tr>
+      <tr><td class="num">46</td><td>Marvel Zombies</td><td><span class="pill animated">Animated</span></td><td>alt. timeline</td></tr>
+      <tr><td class="num">47</td><td>WandaVision</td><td><span class="pill show">Show</span></td><td>2023</td></tr>
+      <tr><td class="num">48</td><td>Loki — S1</td><td><span class="pill show">Show</span></td><td>outside time</td></tr>
+      <tr><td class="num">49</td><td>Deadpool &amp; Wolverine</td><td><span class="pill movie">Movie</span></td><td>2024–25</td></tr>
+      <tr><td class="num">50</td><td>Shang-Chi and the Legend of the Ten Rings</td><td><span class="pill movie">Movie</span></td><td>2023</td></tr>
+      <tr><td class="num">51</td><td>The Falcon and the Winter Soldier</td><td><span class="pill show">Show</span></td><td>2023</td></tr>
+      <tr><td class="num">52</td><td>Spider-Man: Far From Home</td><td><span class="pill movie">Movie</span></td><td>2024</td></tr>
+      <tr><td class="num">53</td><td>Eternals</td><td><span class="pill movie">Movie</span></td><td>2023</td></tr>
+      <tr><td class="num">54</td><td>Spider-Man: No Way Home</td><td><span class="pill movie">Movie</span></td><td>2024</td></tr>
+      <tr><td class="num">55</td><td>Doctor Strange in the Multiverse of Madness</td><td><span class="pill movie">Movie</span></td><td>2024</td></tr>
+      <tr><td class="num">56</td><td>Hawkeye</td><td><span class="pill show">Show</span></td><td>2024</td></tr>
+      <tr><td class="num">57</td><td>What If…? — S1</td><td><span class="pill animated">Animated</span></td><td>alt. realities</td></tr>
+      <tr><td class="num">58</td><td>Moon Knight</td><td><span class="pill show">Show</span></td><td>2024</td></tr>
+      <tr><td class="num">59</td><td>Black Panther: Wakanda Forever</td><td><span class="pill movie">Movie</span></td><td>2024</td></tr>
+      <tr><td class="num">60</td><td>Echo</td><td><span class="pill show">Show</span></td><td>2024</td></tr>
+      <tr><td class="num">61</td><td>She-Hulk: Attorney at Law</td><td><span class="pill show">Show</span></td><td>2024</td></tr>
+      <tr><td class="num">62</td><td>Ms. Marvel</td><td><span class="pill show">Show</span></td><td>2024</td></tr>
+      <tr><td class="num">63</td><td>Thor: Love and Thunder</td><td><span class="pill movie">Movie</span></td><td>2024</td></tr>
+      <tr><td class="num">64</td><td>Werewolf by Night</td><td><span class="pill special">Special</span></td><td>2024</td></tr>
+      <tr><td class="num">65</td><td>Ironheart</td><td><span class="pill show">Show</span></td><td>2024</td></tr>
+      <tr><td class="num">66</td><td>The Guardians of the Galaxy Holiday Special</td><td><span class="pill special">Special</span></td><td>2024</td></tr>
+      <tr><td class="num">67</td><td>Wonder Man</td><td><span class="pill show">Show</span></td><td>2024</td></tr>
+      <tr><td class="num">68</td><td>Ant-Man and the Wasp: Quantumania</td><td><span class="pill movie">Movie</span></td><td>2025</td></tr>
+      <tr><td class="num">69</td><td>Guardians of the Galaxy Vol. 3</td><td><span class="pill movie">Movie</span></td><td>2025</td></tr>
+      <tr><td class="num">70</td><td>Secret Invasion</td><td><span class="pill show">Show</span></td><td>2025</td></tr>
+      <tr><td class="num">71</td><td>The Marvels</td><td><span class="pill movie">Movie</span></td><td>2025</td></tr>
+      <tr><td class="num">72</td><td>Loki — S2</td><td><span class="pill show">Show</span></td><td>outside time</td></tr>
+      <tr><td class="num">73</td><td>What If…? — S2</td><td><span class="pill animated">Animated</span></td><td>alt. realities</td></tr>
+      <tr><td class="num">74</td><td>Agatha All Along</td><td><span class="pill show">Show</span></td><td>2024</td></tr>
+      <tr><td class="num">75</td><td>What If…? — S3</td><td><span class="pill animated">Animated</span></td><td>alt. realities</td></tr>
+      <tr><td class="num">76</td><td>Daredevil: Born Again — S1</td><td><span class="pill show">Show</span></td><td>2025</td></tr>
+      <tr><td class="num">77</td><td>Captain America: Brave New World</td><td><span class="pill movie">Movie</span></td><td>2025</td></tr>
+      <tr><td class="num">78</td><td>Thunderbolts*</td><td><span class="pill movie">Movie</span></td><td>2025</td></tr>
+      <tr><td class="num">79</td><td>Daredevil: Born Again — S2</td><td><span class="pill show">Show</span></td><td>2025</td></tr>
+      <tr><td class="num">80</td><td>The Punisher: One Last Kill</td><td><span class="pill special">Special</span></td><td>2026</td></tr>
     </tbody>
   </table>
 
-  <h2 class="section" id="release">Release Order + Episodes</h2>
-  <p class="note">Tap any show to expand its full episode list.</p>
-
+  <!-- ============ MOVIES ============ -->
+  <h2 class="section" id="movies">Movies — Release Order</h2>
+  <p class="note">All 37 theatrical films released to date, plus the next two on the schedule.</p>
   <div class="phase">
-    <h3>Phase One</h3>
+    <h3>The Infinity Saga</h3>
     <ul class="movies">
-      <li>Iron Man <span class="yr">(2008)</span></li>
-      <li>The Incredible Hulk <span class="yr">(2008)</span></li>
-      <li>Iron Man 2 <span class="yr">(2010)</span></li>
-      <li>Thor <span class="yr">(2011)</span></li>
-      <li>Captain America: The First Avenger <span class="yr">(2011)</span></li>
-      <li>The Avengers <span class="yr">(2012)</span></li>
+      <li>Iron Man <span class="yr">(May 2008)</span></li>
+      <li>The Incredible Hulk <span class="yr">(June 2008)</span></li>
+      <li>Iron Man 2 <span class="yr">(May 2010)</span></li>
+      <li>Thor <span class="yr">(May 2011)</span></li>
+      <li>Captain America: The First Avenger <span class="yr">(July 2011)</span></li>
+      <li>The Avengers <span class="yr">(May 2012)</span></li>
+      <li>Iron Man 3 <span class="yr">(May 2013)</span></li>
+      <li>Thor: The Dark World <span class="yr">(Nov 2013)</span></li>
+      <li>Captain America: The Winter Soldier <span class="yr">(Apr 2014)</span></li>
+      <li>Guardians of the Galaxy <span class="yr">(Aug 2014)</span></li>
+      <li>Avengers: Age of Ultron <span class="yr">(May 2015)</span></li>
+      <li>Ant-Man <span class="yr">(July 2015)</span></li>
+      <li>Captain America: Civil War <span class="yr">(May 2016)</span></li>
+      <li>Doctor Strange <span class="yr">(Nov 2016)</span></li>
+      <li>Guardians of the Galaxy Vol. 2 <span class="yr">(May 2017)</span></li>
+      <li>Spider-Man: Homecoming <span class="yr">(July 2017)</span></li>
+      <li>Thor: Ragnarok <span class="yr">(Nov 2017)</span></li>
+      <li>Black Panther <span class="yr">(Feb 2018)</span></li>
+      <li>Avengers: Infinity War <span class="yr">(Apr 2018)</span></li>
+      <li>Ant-Man and the Wasp <span class="yr">(July 2018)</span></li>
+      <li>Captain Marvel <span class="yr">(Mar 2019)</span></li>
+      <li>Avengers: Endgame <span class="yr">(Apr 2019)</span></li>
+      <li>Spider-Man: Far From Home <span class="yr">(July 2019)</span></li>
+    </ul>
+  </div>
+  <div class="phase">
+    <h3>The Multiverse Saga</h3>
+    <ul class="movies">
+      <li>Black Widow <span class="yr">(July 2021)</span></li>
+      <li>Shang-Chi and the Legend of the Ten Rings <span class="yr">(Sep 2021)</span></li>
+      <li>Eternals <span class="yr">(Nov 2021)</span></li>
+      <li>Spider-Man: No Way Home <span class="yr">(Dec 2021)</span></li>
+      <li>Doctor Strange in the Multiverse of Madness <span class="yr">(May 2022)</span></li>
+      <li>Thor: Love and Thunder <span class="yr">(July 2022)</span></li>
+      <li>Black Panther: Wakanda Forever <span class="yr">(Nov 2022)</span></li>
+      <li>Ant-Man and the Wasp: Quantumania <span class="yr">(Feb 2023)</span></li>
+      <li>Guardians of the Galaxy Vol. 3 <span class="yr">(May 2023)</span></li>
+      <li>The Marvels <span class="yr">(Nov 2023)</span></li>
+      <li>Deadpool &amp; Wolverine <span class="yr">(July 2024)</span></li>
+      <li>Captain America: Brave New World <span class="yr">(Feb 2025)</span></li>
+      <li>Thunderbolts* <span class="yr">(May 2025)</span></li>
+      <li>The Fantastic Four: First Steps <span class="yr">(July 2025)</span></li>
+      <li class="up">Spider-Man: Brand New Day <span class="yr">(July 31, 2026)</span><span class="tag">UPCOMING</span></li>
+      <li class="up">Avengers: Doomsday <span class="yr">(Dec 18, 2026)</span><span class="tag">UPCOMING</span></li>
     </ul>
   </div>
 
+  <!-- ============ ONE-SHOT SHORTS ============ -->
+  <h2 class="section" id="shorts">Marvel One-Shot Shorts</h2>
+  <p class="note">Bonus short films originally released on Blu-ray. The first five were branded "Marvel One-Shots"; the Team Thor trio was later reclassified as One-Shots on Disney+.</p>
   <div class="phase">
-    <h3>Phase Two</h3>
+    <h3>The One-Shots</h3>
     <ul class="movies">
-      <li>Iron Man 3 <span class="yr">(2013)</span></li>
-      <li>Thor: The Dark World <span class="yr">(2013)</span></li>
-      <li>Captain America: The Winter Soldier <span class="yr">(2014)</span></li>
-      <li>Guardians of the Galaxy <span class="yr">(2014)</span></li>
-      <li>Avengers: Age of Ultron <span class="yr">(2015)</span></li>
-      <li>Ant-Man <span class="yr">(2015)</span></li>
+      <li>The Consultant <span class="yr">(2011)</span></li>
+      <li>A Funny Thing Happened on the Way to Thor's Hammer <span class="yr">(2011)</span></li>
+      <li>Item 47 <span class="yr">(2012)</span></li>
+      <li>Agent Carter <span class="yr">(2013)</span></li>
+      <li>All Hail the King <span class="yr">(2014)</span></li>
+    </ul>
+    <h3>Team Thor Shorts</h3>
+    <ul class="movies">
+      <li>Team Thor <span class="yr">(2016)</span></li>
+      <li>Team Thor: Part 2 <span class="yr">(2017)</span></li>
+      <li>Team Darryl <span class="yr">(2018)</span></li>
     </ul>
   </div>
 
+  <!-- ============ DEFENDERS SAGA & AGENT CARTER ============ -->
+  <h2 class="section" id="defenders">The Defenders Saga &amp; Agent Carter</h2>
+  <p class="note">The ABC and Netflix series, now part of Marvel's official timeline. Tap any show for its full episode list.</p>
   <div class="phase">
-    <h3>Phase Three</h3>
-    <ul class="movies">
-      <li>Captain America: Civil War <span class="yr">(2016)</span></li>
-      <li>Doctor Strange <span class="yr">(2016)</span></li>
-      <li>Guardians of the Galaxy Vol. 2 <span class="yr">(2017)</span></li>
-      <li>Spider-Man: Homecoming <span class="yr">(2017)</span></li>
-      <li>Thor: Ragnarok <span class="yr">(2017)</span></li>
-      <li>Black Panther <span class="yr">(2018)</span></li>
-      <li>Avengers: Infinity War <span class="yr">(2018)</span></li>
-      <li>Ant-Man and the Wasp <span class="yr">(2018)</span></li>
-      <li>Captain Marvel <span class="yr">(2019)</span></li>
-      <li>Avengers: Endgame <span class="yr">(2019)</span></li>
-      <li>Spider-Man: Far From Home <span class="yr">(2019)</span></li>
-    </ul>
+
+    <details class="show"><summary>Agent Carter <span class="epcount">18 eps · 2 seasons</span></summary>
+      <div class="body">
+        <h4>Season 1 (2015)</h4>
+        <ol><li>Now is Not the End</li><li>Bridge and Tunnel</li><li>Time and Tide</li><li>The Blitzkrieg Button</li><li>The Iron Ceiling</li><li>A Sin to Err</li><li>Snafu</li><li>Valediction</li></ol>
+        <h4>Season 2 (2016)</h4>
+        <ol><li>The Lady in the Lake</li><li>A View in the Dark</li><li>Better Angels</li><li>Smoke &amp; Mirrors</li><li>The Atomic Job</li><li>Life of the Party</li><li>Monsters</li><li>The Edge of Mystery</li><li>A Little Song and Dance</li><li>Hollywood Ending</li></ol>
+      </div>
+    </details>
+
+    <details class="show"><summary>Daredevil <span class="epcount">39 eps · 3 seasons</span></summary>
+      <div class="body">
+        <h4>Season 1 (2015)</h4>
+        <ol><li>Into the Ring</li><li>Cut Man</li><li>Rabbit in a Snowstorm</li><li>In the Blood</li><li>World on Fire</li><li>Condemned</li><li>Stick</li><li>Shadows in the Glass</li><li>Speak of the Devil</li><li>Nelson v. Murdock</li><li>The Path of the Righteous</li><li>The Ones We Leave Behind</li><li>Daredevil</li></ol>
+        <h4>Season 2 (2016)</h4>
+        <ol><li>Bang</li><li>Dogs to a Gunfight</li><li>New York's Finest</li><li>Penny and Dime</li><li>Kinbaku</li><li>Regrets Only</li><li>Semper Fidelis</li><li>Guilty as Sin</li><li>Seven Minutes in Heaven</li><li>The Man in the Box</li><li>.380</li><li>The Dark at the End of the Tunnel</li><li>A Cold Day in Hell's Kitchen</li></ol>
+        <h4>Season 3 (2018)</h4>
+        <ol><li>Resurrection</li><li>Please</li><li>No Good Deed</li><li>Blindsided</li><li>The Perfect Game</li><li>The Devil You Know</li><li>Aftermath</li><li>Upstairs/Downstairs</li><li>Revelations</li><li>Karen</li><li>Reunion</li><li>One Last Shot</li><li>A New Napkin</li></ol>
+      </div>
+    </details>
+
+    <details class="show"><summary>Jessica Jones <span class="epcount">39 eps · 3 seasons</span></summary>
+      <div class="body">
+        <h4>Season 1 (2015)</h4>
+        <ol><li>AKA Ladies Night</li><li>AKA Crush Syndrome</li><li>AKA It's Called Whiskey</li><li>AKA 99 Friends</li><li>AKA The Sandwich Saved Me</li><li>AKA You're a Winner!</li><li>AKA Top Shelf Perverts</li><li>AKA WWJD?</li><li>AKA Sin Bin</li><li>AKA 1,000 Cuts</li><li>AKA I've Got the Blues</li><li>AKA Take a Bloody Number</li><li>AKA Smile</li></ol>
+        <h4>Season 2 (2018)</h4>
+        <ol><li>AKA Start at the Beginning</li><li>AKA Freak Accident</li><li>AKA Sole Survivor</li><li>AKA God Help the Hobo</li><li>AKA The Octopus</li><li>AKA Facetime</li><li>AKA I Want Your Cray Cray</li><li>AKA Ain't We Got Fun</li><li>AKA Shark in the Bathtub, Monster in the Bed</li><li>AKA Pork Chop</li><li>AKA Three Lives and Counting</li><li>AKA Pray for My Patsy</li><li>AKA Playland</li></ol>
+        <h4>Season 3 (2019)</h4>
+        <ol><li>A.K.A. The Perfect Burger</li><li>A.K.A. You're Welcome</li><li>A.K.A. I Have No Spleen</li><li>A.K.A. Customer Service Is Standing By</li><li>A.K.A. I Wish</li><li>A.K.A. Sorry Face</li><li>A.K.A. The Double Half-Wappinger</li><li>A.K.A. Camera Friendly</li><li>A.K.A. I Did Something Today</li><li>A.K.A. Hero Pants</li><li>A.K.A. Hellcat</li><li>A.K.A. A Lotta Worms</li><li>A.K.A. Everything</li></ol>
+      </div>
+    </details>
+
+    <details class="show"><summary>Luke Cage <span class="epcount">26 eps · 2 seasons</span></summary>
+      <div class="body">
+        <h4>Season 1 (2016)</h4>
+        <ol><li>Moment of Truth</li><li>Code of the Streets</li><li>Who's Gonna Take the Weight?</li><li>Step in the Arena</li><li>Just to Get a Rep</li><li>Suckas Need Bodyguards</li><li>Manifest</li><li>Blowin' Up the Spot</li><li>DWYCK</li><li>Take It Personal</li><li>Now You're Mine</li><li>Soliloquy of Chaos</li><li>You Know My Steez</li></ol>
+        <h4>Season 2 (2018)</h4>
+        <ol><li>Soul Brother #1</li><li>Straighten It Out</li><li>Wig Out</li><li>I Get Physical</li><li>All Souled Out</li><li>The Basement</li><li>On and On</li><li>If It Ain't Rough, It Ain't Right</li><li>For Pete's Sake</li><li>The Main Ingredient</li><li>The Creator</li><li>Can't Front on Me</li><li>They Reminisce Over You</li></ol>
+      </div>
+    </details>
+
+    <details class="show"><summary>Iron Fist <span class="epcount">23 eps · 2 seasons</span></summary>
+      <div class="body">
+        <h4>Season 1 (2017)</h4>
+        <ol><li>Snow Gives Way</li><li>Shadow Hawk Takes Flight</li><li>Rolling Thunder Cannon Punch</li><li>Eight Diagram Dragon Palm</li><li>Under Leaf Pluck Lotus</li><li>Immortal Emerges from Cave</li><li>Felling Tree with Roots</li><li>The Blessing of Many Fractures</li><li>The Mistress of All Agonies</li><li>Black Tiger Steals Heart</li><li>Lead Horse Back to Stable</li><li>Bar the Big Boss</li><li>Dragon Plays with Fire</li></ol>
+        <h4>Season 2 (2018)</h4>
+        <ol><li>The Fury of Iron Fist</li><li>The City's Not for Burning</li><li>This Deadly Secret...</li><li>Target: Iron Fist</li><li>Heart of the Dragon</li><li>The Dragon Dies at Dawn</li><li>Morning of the Mindstorm</li><li>Citadel on the Edge of Vengeance</li><li>War Without End</li><li>A Duel of Iron</li></ol>
+      </div>
+    </details>
+
+    <details class="show"><summary>The Defenders <span class="epcount">8 eps · limited series (2017)</span></summary>
+      <div class="body">
+        <ol><li>The H Word</li><li>Mean Right Hook</li><li>Worst Behavior</li><li>Royal Dragon</li><li>Take Shelter</li><li>Ashes, Ashes</li><li>Fish in the Jailhouse</li><li>The Defenders</li></ol>
+      </div>
+    </details>
+
+    <details class="show"><summary>The Punisher <span class="epcount">26 eps · 2 seasons</span></summary>
+      <div class="body">
+        <h4>Season 1 (2017)</h4>
+        <ol><li>3AM</li><li>Two Dead Men</li><li>Kandahar</li><li>Resupply</li><li>Gunner</li><li>The Judas Goat</li><li>Crosshairs</li><li>Cold Steel</li><li>Front Toward Enemy</li><li>Virtue of the Vicious</li><li>Danger Close</li><li>Home</li><li>Memento Mori</li></ol>
+        <h4>Season 2 (2019)</h4>
+        <ol><li>Roadhouse Blues</li><li>Fight or Flight</li><li>Trouble the Water</li><li>Scar Tissue</li><li>One-Eyed Jacks</li><li>Nakazat</li><li>One Bad Day</li><li>My Brother's Keeper</li><li>Flustercluck</li><li>The Dark Hearts of Men</li><li>The Abyss</li><li>Collision Course</li><li>The Whirlwind</li></ol>
+      </div>
+    </details>
+
   </div>
 
+  <!-- ============ DISNEY+ LIVE-ACTION ============ -->
+  <h2 class="section" id="disney">Marvel Studios Disney+ Shows</h2>
+  <p class="note">The live-action Disney+ series, in release order. Tap to expand episodes.</p>
   <div class="phase">
-    <h3>Phase Four</h3>
 
-    <details class="show"><summary>WandaVision <span class="epcount">9 eps</span></summary>
-      <ol>
-        <li>Filmed Before a Live Studio Audience</li>
-        <li>Don't Touch That Dial</li>
-        <li>Now in Color</li>
-        <li>We Interrupt This Program</li>
-        <li>On a Very Special Episode…</li>
-        <li>All-New Halloween Spooktacular!</li>
-        <li>Breaking the Fourth Wall</li>
-        <li>Previously On</li>
-        <li>The Series Finale</li>
-      </ol>
+    <details class="show"><summary>WandaVision <span class="epcount">9 eps · 2021</span></summary>
+      <div class="body"><ol><li>Filmed Before a Live Studio Audience</li><li>Don't Touch That Dial</li><li>Now in Color</li><li>We Interrupt This Program</li><li>On a Very Special Episode...</li><li>All-New Halloween Spooktacular!</li><li>Breaking the Fourth Wall</li><li>Previously On</li><li>The Series Finale</li></ol></div>
     </details>
 
-    <details class="show"><summary>The Falcon and the Winter Soldier <span class="epcount">6 eps</span></summary>
-      <ol>
-        <li>New World Order</li>
-        <li>The Star-Spangled Man</li>
-        <li>Power Broker</li>
-        <li>The Whole World Is Watching</li>
-        <li>Truth</li>
-        <li>One World, One People</li>
-      </ol>
+    <details class="show"><summary>The Falcon and the Winter Soldier <span class="epcount">6 eps · 2021</span></summary>
+      <div class="body"><ol><li>New World Order</li><li>The Star-Spangled Man</li><li>Power Broker</li><li>The Whole World Is Watching</li><li>Truth</li><li>One World, One People</li></ol></div>
     </details>
 
-    <details class="show"><summary>Loki — Season 1 <span class="epcount">6 eps</span></summary>
-      <ol>
-        <li>Glorious Purpose</li>
-        <li>The Variant</li>
-        <li>Lamentis</li>
-        <li>The Nexus Event</li>
-        <li>Journey Into Mystery</li>
-        <li>For All Time. Always.</li>
-      </ol>
+    <details class="show"><summary>Loki <span class="epcount">12 eps · 2 seasons</span></summary>
+      <div class="body">
+        <h4>Season 1 (2021)</h4>
+        <ol><li>Glorious Purpose</li><li>The Variant</li><li>Lamentis</li><li>The Nexus Event</li><li>Journey into Mystery</li><li>For All Time. Always.</li></ol>
+        <h4>Season 2 (2023)</h4>
+        <ol><li>Ouroboros</li><li>Breaking Brad</li><li>1893</li><li>Heart of the TVA</li><li>Science/Fiction</li><li>Glorious Purpose</li></ol>
+      </div>
     </details>
 
-    <details class="show"><summary>What If…? — Season 1 <span class="epcount">9 eps · alt. realities</span></summary>
-      <ol>
-        <li>What If… Captain Carter Were the First Avenger?</li>
-        <li>What If… T'Challa Became a Star-Lord?</li>
-        <li>What If… the World Lost Its Mightiest Heroes?</li>
-        <li>What If… Doctor Strange Lost His Heart Instead of His Hands?</li>
-        <li>What If… Zombies?!</li>
-        <li>What If… Killmonger Rescued Tony Stark?</li>
-        <li>What If… Thor Were an Only Child?</li>
-        <li>What If… Ultron Won?</li>
-        <li>What If… the Watcher Broke His Oath?</li>
-      </ol>
+    <details class="show"><summary>Hawkeye <span class="epcount">6 eps · 2021</span></summary>
+      <div class="body"><ol><li>Never Meet Your Heroes</li><li>Hide and Seek</li><li>Echoes</li><li>Partners, Am I Right?</li><li>Ronin</li><li>So This Is Christmas?</li></ol></div>
     </details>
 
-    <ul class="movies">
-      <li>Black Widow <span class="yr">(2021)</span></li>
-      <li>Shang-Chi and the Legend of the Ten Rings <span class="yr">(2021)</span></li>
-      <li>Eternals <span class="yr">(2021)</span></li>
-    </ul>
-
-    <details class="show"><summary>Hawkeye <span class="epcount">6 eps</span></summary>
-      <ol>
-        <li>Never Meet Your Heroes</li>
-        <li>Hide and Seek</li>
-        <li>Echoes</li>
-        <li>Partners, Am I Right?</li>
-        <li>Ronin</li>
-        <li>So This Is Christmas?</li>
-      </ol>
+    <details class="show"><summary>Moon Knight <span class="epcount">6 eps · 2022</span></summary>
+      <div class="body"><ol><li>The Goldfish Problem</li><li>Summon the Suit</li><li>The Friendly Type</li><li>The Tomb</li><li>Asylum</li><li>Gods and Monsters</li></ol></div>
     </details>
 
-    <ul class="movies">
-      <li>Spider-Man: No Way Home <span class="yr">(2021)</span></li>
-    </ul>
-
-    <details class="show"><summary>Moon Knight <span class="epcount">6 eps</span></summary>
-      <ol>
-        <li>The Goldfish Problem</li>
-        <li>Summon the Suit</li>
-        <li>The Friendly Type</li>
-        <li>The Tomb</li>
-        <li>Asylum</li>
-        <li>Gods and Monsters</li>
-      </ol>
+    <details class="show"><summary>Ms. Marvel <span class="epcount">6 eps · 2022</span></summary>
+      <div class="body"><ol><li>Generation Why</li><li>Crushed</li><li>Destined</li><li>Seeing Red</li><li>Time and Again</li><li>No Normal</li></ol></div>
     </details>
 
-    <ul class="movies">
-      <li>Doctor Strange in the Multiverse of Madness <span class="yr">(2022)</span></li>
-    </ul>
-
-    <details class="show"><summary>Ms. Marvel <span class="epcount">6 eps</span></summary>
-      <ol>
-        <li>Generation Why</li>
-        <li>Crushed</li>
-        <li>Destined</li>
-        <li>Seeing Red</li>
-        <li>Time and Again</li>
-        <li>No Normal</li>
-      </ol>
+    <details class="show"><summary>She-Hulk: Attorney at Law <span class="epcount">9 eps · 2022</span></summary>
+      <div class="body"><ol><li>A Normal Amount of Rage</li><li>Superhuman Law</li><li>The People vs. Emil Blonsky</li><li>Is This Not Real Magic?</li><li>Mean, Green, and Straight Poured into These Jeans</li><li>Just Jen</li><li>The Retreat</li><li>Ribbit and Rip It</li><li>Whose Show Is This?</li></ol></div>
     </details>
 
-    <ul class="movies">
-      <li>Thor: Love and Thunder <span class="yr">(2022)</span></li>
-    </ul>
-
-    <details class="show"><summary>I Am Groot — Season 1 <span class="epcount">5 shorts</span></summary>
-      <ol>
-        <li>Groot's First Steps</li>
-        <li>The Little Guy</li>
-        <li>Groot's Pursuit</li>
-        <li>Groot Takes a Bath</li>
-        <li>Magnum Opus</li>
-      </ol>
+    <details class="show"><summary>Secret Invasion <span class="epcount">6 eps · 2023</span></summary>
+      <div class="body"><ol><li>Resurrection</li><li>Promises</li><li>Betrayed</li><li>Beloved</li><li>Harvest</li><li>Home</li></ol></div>
     </details>
 
-    <details class="show"><summary>She-Hulk: Attorney at Law <span class="epcount">9 eps</span></summary>
-      <ol>
-        <li>A Normal Amount of Rage</li>
-        <li>Superhuman Law</li>
-        <li>The People vs. Emil Blonsky</li>
-        <li>Is This Not Real Magic?</li>
-        <li>Mean, Green, and Straight Poured Into These Jeans</li>
-        <li>Just Jen</li>
-        <li>The Retreat</li>
-        <li>Ribbit and Rip It</li>
-        <li>Whose Show Is This?</li>
-      </ol>
+    <details class="show"><summary>Echo <span class="epcount">5 eps · 2024</span></summary>
+      <div class="body"><ol><li>Chafa</li><li>Lowak</li><li>Tuklo</li><li>Taloa</li><li>Maya</li></ol></div>
     </details>
 
-    <ul class="movies">
-      <li>Werewolf by Night <span class="yr">(2022 · Special)</span></li>
-      <li>Black Panther: Wakanda Forever <span class="yr">(2022)</span></li>
-      <li>The Guardians of the Galaxy Holiday Special <span class="yr">(2022 · Special)</span></li>
-    </ul>
+    <details class="show"><summary>Agatha All Along <span class="epcount">9 eps · 2024</span></summary>
+      <div class="body"><ol><li>Seekest Thou the Road</li><li>Circle Sewn with Fate / Unlock Thy Hidden Gate</li><li>Through Many Miles / Of Tricks and Trials</li><li>If I Can't Reach You / Let My Song Teach You</li><li>Darkest Hour / Wake Thy Power</li><li>Familiar by Thy Side</li><li>Death's Hand in Mine</li><li>Follow Me My Friend / To Glory at the End</li><li>Maiden Mother Crone</li></ol></div>
+    </details>
+
+    <details class="show"><summary>Daredevil: Born Again <span class="epcount">17 eps · 2 seasons</span></summary>
+      <div class="body">
+        <h4>Season 1 (2025)</h4>
+        <ol><li>Heaven's Half Hour</li><li>Optics</li><li>The Hollow of His Hand</li><li>Sic Semper Systema</li><li>With Interest</li><li>Excessive Force</li><li>Art for Art's Sake</li><li>Isle of Joy</li><li>Straight to Hell</li></ol>
+        <h4>Season 2 (2026)</h4>
+        <ol><li>The Northern Star</li><li>Shoot the Moon</li><li>The Scales &amp; the Sword</li><li>Gloves Off</li><li>The Grand Design</li><li>Requiem</li><li>The Hateful Darkness</li><li>The Southern Cross</li></ol>
+      </div>
+    </details>
+
+    <details class="show"><summary>Ironheart <span class="epcount">6 eps · 2025</span></summary>
+      <div class="body"><ol><li>Take Me Home</li><li>Will the Real Natalie Please Stand Up?</li><li>We in Danger, Girl</li><li>Bad Magic</li><li>Karma's a Glitch</li><li>The Past Is the Past</li></ol></div>
+    </details>
+
+    <details class="show"><summary>Wonder Man <span class="epcount">8 eps · 2026</span></summary>
+      <div class="body"><ol><li>Matinee</li><li>Self-Tape</li><li>Pacoima</li><li>Doorman</li><li>Found Footage</li><li>Callback</li><li>Kathy Friedman</li><li>Yucca Valley</li></ol></div>
+    </details>
+
   </div>
 
+  <!-- ============ ANIMATION ============ -->
+  <h2 class="section" id="animated">Marvel Studios Animation</h2>
+  <p class="note">Animated series &amp; shorts. Most "What If…?", X-Men '97, and Marvel Zombies stories take place in alternate realities.</p>
   <div class="phase">
-    <h3>Phase Five</h3>
-    <ul class="movies">
-      <li>Ant-Man and the Wasp: Quantumania <span class="yr">(2023)</span></li>
-    </ul>
 
-    <details class="show"><summary>What If…? — Season 2 <span class="epcount">9 eps · alt. realities</span></summary>
-      <ol>
-        <li>What If… Nebula Joined the Nova Corps?</li>
-        <li>What If… Peter Quill Attacked Earth's Mightiest Heroes?</li>
-        <li>What If… Happy Hogan Saved Christmas?</li>
-        <li>What If… Iron Man Crashed Into the Grandmaster?</li>
-        <li>What If… Captain Carter Fought the Hydra Stomper?</li>
-        <li>What If… Kahhori Reshaped the World?</li>
-        <li>What If… Hela Found the Ten Rings?</li>
-        <li>What If… the Avengers Assembled in 1602?</li>
-        <li>What If… Strange Supreme Intervened?</li>
-      </ol>
+    <details class="show"><summary>What If…? <span class="epcount">26 eps · 3 seasons</span></summary>
+      <div class="body">
+        <h4>Season 1 (2021)</h4>
+        <ol><li>What If… Captain Carter Were the First Avenger?</li><li>What If… T'Challa Became a Star-Lord?</li><li>What If… the World Lost Its Mightiest Heroes?</li><li>What If… Doctor Strange Lost His Heart Instead of His Hands?</li><li>What If… Zombies?!</li><li>What If… Killmonger Rescued Tony Stark?</li><li>What If… Thor Were an Only Child?</li><li>What If… Ultron Won?</li><li>What If… the Watcher Broke His Oath?</li></ol>
+        <h4>Season 2 (2023)</h4>
+        <ol><li>What If… Nebula Joined the Nova Corps?</li><li>What If… Peter Quill Attacked Earth's Mightiest Heroes?</li><li>What If… Happy Hogan Saved Christmas?</li><li>What If… Iron Man Crashed into the Grandmaster?</li><li>What If… Captain Carter Fought the Hydra Stomper?</li><li>What If… Kahhori Reshaped the World?</li><li>What If… Hela Found the Ten Rings?</li><li>What If… the Avengers Assembled in 1602?</li><li>What If… Strange Supreme Intervened?</li></ol>
+        <h4>Season 3 (2024)</h4>
+        <ol><li>What If… the Hulk Fought the Mech Avengers?</li><li>What If… Agatha Went to Hollywood?</li><li>What If… the Red Guardian Stopped the Winter Soldier?</li><li>What If… Howard the Duck Got Hitched?</li><li>What If… the Emergence Destroyed the Earth?</li><li>What If… 1872?</li><li>What If… the Watcher Disappeared?</li><li>What If… What If?</li></ol>
+      </div>
     </details>
 
-    <ul class="movies">
-      <li>Guardians of the Galaxy Vol. 3 <span class="yr">(2023)</span></li>
-    </ul>
-
-    <details class="show"><summary>Secret Invasion <span class="epcount">6 eps</span></summary>
-      <ol>
-        <li>Resurrection</li>
-        <li>Promises</li>
-        <li>Betrayed</li>
-        <li>Beloved</li>
-        <li>Harvest</li>
-        <li>Home</li>
-      </ol>
+    <details class="show"><summary>X-Men '97 — Season 1 <span class="epcount">10 eps · 2024</span></summary>
+      <div class="body"><ol><li>To Me, My X-Men</li><li>Mutant Liberation Begins</li><li>Fire Made Flesh</li><li>Motendo / Lifedeath – Part 1</li><li>Remember It</li><li>Lifedeath – Part 2</li><li>Bright Eyes</li><li>Tolerance Is Extinction – Part 1</li><li>Tolerance Is Extinction – Part 2</li><li>Tolerance Is Extinction – Part 3</li></ol>
+      <p class="sub">Season 2 premieres July 1, 2026.</p></div>
     </details>
 
-    <details class="show"><summary>Loki — Season 2 <span class="epcount">6 eps</span></summary>
-      <ol>
-        <li>Ouroboros</li>
-        <li>Breaking Brad</li>
-        <li>1893</li>
-        <li>Heart of the TVA</li>
-        <li>Science/Fiction</li>
-        <li>Glorious Purpose</li>
-      </ol>
+    <details class="show"><summary>Your Friendly Neighborhood Spider-Man — Season 1 <span class="epcount">10 eps · 2025</span></summary>
+      <div class="body"><ol><li>Amazing Fantasy</li><li>The Parker Luck</li><li>Secret Identity Crisis</li><li>Hitting the Big Time</li><li>The Unicorn Unleashed!</li><li>Duel with the Devil</li><li>Scorpion Rising</li><li>Tangled Web</li><li>Hero or Menace</li><li>If This Be My Destiny...</li></ol></div>
     </details>
 
-    <ul class="movies">
-      <li>The Marvels <span class="yr">(2023)</span></li>
-    </ul>
-
-    <details class="show"><summary>Echo <span class="epcount">5 eps</span></summary>
-      <ol>
-        <li>Chafa</li>
-        <li>Lowak</li>
-        <li>Tuklo</li>
-        <li>Taloa</li>
-        <li>Maya</li>
-      </ol>
+    <details class="show"><summary>Marvel Zombies <span class="epcount">4 eps · 2025</span></summary>
+      <div class="body"><ol><li>Episode 1</li><li>Episode 2</li><li>Episode 3</li><li>Episode 4</li></ol>
+      <p class="sub">This limited series' episodes were released without individual titles.</p></div>
     </details>
 
-    <details class="show"><summary>X-Men '97 — Season 1 <span class="epcount">10 eps · alt. reality</span></summary>
-      <ol>
-        <li>To Me, My X-Men</li>
-        <li>Mutant Liberation Begins</li>
-        <li>Fire Made Flesh</li>
-        <li>Motendo / Lifedeath – Part 1</li>
-        <li>Remember It</li>
-        <li>Lifedeath – Part 2</li>
-        <li>Bright Eyes</li>
-        <li>Tolerance Is Extinction – Part 1</li>
-        <li>Tolerance Is Extinction – Part 2</li>
-        <li>Tolerance Is Extinction – Part 3</li>
-      </ol>
+    <details class="show"><summary>Eyes of Wakanda <span class="epcount">4 eps · 2025</span></summary>
+      <div class="body"><ol><li>Into the Lion's Den</li><li>Legends and Lies</li><li>Lost and Found</li><li>The Last Panther</li></ol></div>
     </details>
 
-    <ul class="movies">
-      <li>Deadpool &amp; Wolverine <span class="yr">(2024)</span></li>
-    </ul>
-
-    <details class="show"><summary>Agatha All Along <span class="epcount">9 eps</span></summary>
-      <ol>
-        <li>Seekest Thou the Road</li>
-        <li>Circle Sewn With Fate / Unlock Thy Secrets</li>
-        <li>Through Many Miles / Of Tricks and Trials</li>
-        <li>If I Can't Reach You / Let My Song Teach You</li>
-        <li>Darkest Hour / Wake Thy Power</li>
-        <li>Familiar Tales / Through Backwards Spells</li>
-        <li>Death's Hand in Mine / Lo, There Is a Fork in the Road</li>
-        <li>Follow Me My Friend / To Glory at the End</li>
-        <li>Maiden Mother Crone / The Witches' Road</li>
-      </ol>
+    <details class="show"><summary>I Am Groot (shorts) <span class="epcount">10 shorts · 2 seasons</span></summary>
+      <div class="body">
+        <h4>Season 1 (2022)</h4>
+        <ol><li>Groot's First Steps</li><li>The Little Guy</li><li>Groot's Pursuit</li><li>Groot Takes a Bath</li><li>Magnum Opus</li></ol>
+        <h4>Season 2 (2023)</h4>
+        <ol><li>Are You My Groot?</li><li>Groot Noses Around</li><li>Groot's Snow Day</li><li>Groot's Sweet Treat</li><li>Groot and the Great Prophecy</li></ol>
+      </div>
     </details>
 
-    <details class="show"><summary>What If…? — Season 3 <span class="epcount">8 eps · alt. realities</span></summary>
-      <ol>
-        <li>What If… the Hulk Fought the Mech Avengers?</li>
-        <li>What If… Agatha Went to Hollywood?</li>
-        <li>What If… the Red Guardian Stopped the Winter Soldier?</li>
-        <li>What If… Howard the Duck Got Hitched?</li>
-        <li>What If… the Emergence Destroyed the Earth?</li>
-        <li>What If… 1872?</li>
-        <li>What If… the Hulk Fought the Mech Avengers (continued)?</li>
-        <li>What If… the Watcher Disappeared?</li>
-      </ol>
-    </details>
   </div>
 
+  <!-- ============ SPECIALS ============ -->
+  <h2 class="section" id="specials">Special Presentations</h2>
+  <p class="note">Standalone TV specials — each is a single ~45–60 minute film.</p>
   <div class="phase">
-    <h3>Phase Six (2025–)</h3>
     <ul class="movies">
-      <li>Captain America: Brave New World <span class="yr">(2025)</span></li>
-    </ul>
-
-    <details class="show"><summary>Daredevil: Born Again — Season 1 <span class="epcount">9 eps</span></summary>
-      <ol>
-        <li>Heaven's Half Hour</li>
-        <li>Optics</li>
-        <li>The Hollow of His Hand</li>
-        <li>Sic Semper Systema</li>
-        <li>With Interest</li>
-        <li>Excessive Force</li>
-        <li>Art for Art's Sake</li>
-        <li>Isle of Joy</li>
-        <li>Straight to Hell</li>
-      </ol>
-    </details>
-
-    <ul class="movies">
-      <li>Thunderbolts* <span class="yr">(2025)</span></li>
-    </ul>
-
-    <details class="show"><summary>Ironheart <span class="epcount">6 eps</span></summary>
-      <ol>
-        <li>Take Me Home</li>
-        <li>Will the Real Natalie Please Stand Up?</li>
-        <li>We In Danger, Girl</li>
-        <li>Bad Magic</li>
-        <li>Karma's a Glitch</li>
-        <li>The Past Is the Past</li>
-      </ol>
-    </details>
-
-    <details class="show"><summary>Eyes of Wakanda <span class="epcount">4 eps · animated</span></summary>
-      <ol>
-        <li>Episode 1</li>
-        <li>Episode 2</li>
-        <li>Episode 3</li>
-        <li>Episode 4</li>
-      </ol>
-    </details>
-
-    <details class="show"><summary>Marvel Zombies <span class="epcount">4 eps · animated</span></summary>
-      <ol>
-        <li>Episode 1</li>
-        <li>Episode 2</li>
-        <li>Episode 3</li>
-        <li>Episode 4</li>
-      </ol>
-    </details>
-
-    <ul class="movies">
-      <li>The Fantastic Four: First Steps <span class="yr">(2025)</span></li>
+      <li>Werewolf by Night <span class="yr">(Oct 2022)</span></li>
+      <li>The Guardians of the Galaxy Holiday Special <span class="yr">(Nov 2022)</span></li>
+      <li>The Punisher: One Last Kill <span class="yr">(May 2026)</span></li>
     </ul>
   </div>
 
   <footer>
-    Compiled June 2026 · A fan reference guide.<br>
-    Episode titles for the newest 2025 releases are best-effort and may be updated.<br>
-    "What If…?", "X-Men '97", "Marvel Zombies" &amp; "Eyes of Wakanda" are set in alternate realities.
+    <b>Compiled June 2026.</b> Verified against Wikipedia, Marvel.com and Disney+.<br>
+    Chronological order follows Marvel's official Disney+ "Timeline Order" collection.<br>
+    <b>Not yet released:</b> Spider-Man: Brand New Day, Avengers: Doomsday, X-Men '97 S2 (July 2026), VisionQuest (Oct 2026).<br>
+    Multiverse titles (Loki, Deadpool &amp; Wolverine, What If…?, Marvel Zombies) sit "outside" the main timeline; their single placement is a curatorial choice.
   </footer>
 
 </div>
