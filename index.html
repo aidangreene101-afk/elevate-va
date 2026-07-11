@@ -4,6 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elevate VA — Premium Virtual Assistant Services</title>
+<meta name="description" content="Elevate VA pairs founders and small businesses with dedicated virtual assistants for inbox, admin, social media, scheduling, copywriting, and e-commerce support. Get matched within 24 hours.">
+<meta name="theme-color" content="#0a0a0f">
+<link rel="canonical" href="https://elevateva.com/">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Elevate VA — Premium Virtual Assistant Services">
+<meta property="og:description" content="Elite virtual assistants who handle the work that keeps you from growing your business. Matched within 24 hours.">
+<meta property="og:url" content="https://elevateva.com/">
+<meta property="og:site_name" content="Elevate VA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Elevate VA — Premium Virtual Assistant Services">
+<meta name="twitter:description" content="Elite virtual assistants who handle the work that keeps you from growing your business.">
+
+<!-- Favicon: inline gold "E" so there is no extra request / no missing-file 404 -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0f'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' font-weight='600' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -229,7 +246,7 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
 <div id="founding-bar">
   <div class="founding-inner">
     <span class="founding-spots">⚡ Founding Offer</span>
-    <span class="founding-text"><strong>12 founding spots remaining</strong> — lock in 50% off annual pricing, forever</span>
+    <span class="founding-text"><strong><span class="spots-count">12</span> founding spots remaining</strong> — lock in 50% off annual pricing, forever</span>
     <div id="countdown">
       <div class="cd-unit"><div class="cd-num" id="cd-d">06</div><div class="cd-label">days</div></div>
       <div class="cd-sep">:</div>
@@ -273,6 +290,9 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
     </div>
   </div>
 
+  <!-- ⚠️ PLACEHOLDER STATS — these numbers are invented. Publishing fabricated
+       performance claims violates FTC rules (and equivalents elsewhere). Replace
+       with real figures before launch, or remove this block until you have them. -->
   <div class="stats">
     <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Hours saved monthly</div></div>
     <div class="stat"><div class="stat-num">98%</div><div class="stat-label">Client satisfaction</div></div>
@@ -410,7 +430,7 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
       <div>
         <h3>The <em>founding member</em> opportunity.</h3>
         <p style="margin-top:16px">We're in our launch week. The first 20 clients who commit to an annual plan lock in 50% off — not just today, but every year they stay. This price never goes up for you.</p>
-        <p style="margin-top:12px;font-size:13px;color:rgba(107,107,117,0.7)">12 founding spots remain as of today.</p>
+        <p class="spots-line" style="margin-top:12px;font-size:13px;color:rgba(107,107,117,0.7)"><span class="spots-count">12</span> founding spots remain as of today.</p>
         <button class="btn-primary" style="margin-top:28px" onclick="toggleBilling();document.getElementById('pricing-section').scrollIntoView({behavior:'smooth'})">Show Founding Prices →</button>
       </div>
       <div class="founding-perks">
@@ -423,6 +443,12 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
     </div>
   </div>
 
+  <!-- ⚠️ PLACEHOLDER TESTIMONIALS — these people and quotes are invented.
+       Publishing fake testimonials is illegal under the FTC's fake-reviews rule
+       (fines up to ~$51k per violation) and similar laws abroad. Replace every
+       quote/name/role below with a real, permissioned testimonial, or delete this
+       whole section until you have genuine ones. Same goes for the "200+ founders"
+       line in the hero and the avatar row. -->
   <!-- TESTIMONIALS -->
   <div class="section">
     <div class="section-label">Client stories</div>
@@ -463,10 +489,9 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
   <footer>
     <div class="footer-logo">ELEVATE VA</div>
     <div class="footer-links">
-      <a href="mailto:hello@elevateva.com">hello@elevateva.com</a>
-      <!-- Replace with your Cal.com link -->
-      <a href="https://cal.com/REPLACE_USERNAME" target="_blank">Book a Call</a>
-      <a href="#">Privacy</a>
+      <a href="#" class="contact-email footer-email">hello@elevateva.com</a>
+      <a href="#" class="book-call-link" target="_blank" rel="noopener">Book a Call</a>
+      <a href="#" onclick="showPage('privacy');return false;">Privacy</a>
     </div>
     <div class="footer-copy">© 2026 Elevate VA · All rights reserved</div>
   </footer>
@@ -515,8 +540,8 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
     </div>
     <div class="dash-grid">
       <div class="panel">
-        <div class="panel-title">Current Tasks</div>
-        <div class="task-list">
+        <div class="panel-title" style="display:flex;justify-content:space-between;align-items:center">Current Tasks <a href="#" onclick="clearTasks();return false;" style="color:var(--muted);font-size:10px;text-transform:none;letter-spacing:0;text-decoration:none">Clear my tasks</a></div>
+        <div class="task-list" id="task-list">
           <div class="task-item"><div class="task-status status-progress"></div><div class="task-info"><div class="task-name">Research 10 competitors for Q3 deck</div><div class="task-meta">Assigned to Maya · Due today</div></div><span class="task-priority priority-high">High</span></div>
           <div class="task-item"><div class="task-status status-progress"></div><div class="task-info"><div class="task-name">Schedule podcast outreach emails (x20)</div><div class="task-meta">Assigned to Maya · Due tomorrow</div></div><span class="task-priority priority-medium">Medium</span></div>
           <div class="task-item"><div class="task-status status-done"></div><div class="task-info"><div class="task-name">May social media calendar — Instagram</div><div class="task-meta">Completed by Maya · April 28</div></div><span class="task-priority priority-low">Done ✓</span></div>
@@ -578,7 +603,7 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
       </div>
       <div class="form-group">
         <label class="form-label">Priority</label>
-        <select class="form-select">
+        <select class="form-select" id="task-priority">
           <option>Low — within 48 hours</option>
           <option>Medium — within 24 hours</option>
           <option>High — within 8 hours</option>
@@ -591,6 +616,37 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
       <textarea class="form-textarea" placeholder="Be as specific as possible. Include any relevant links or examples of the desired output..." id="task-desc"></textarea>
     </div>
     <button class="submit-btn" onclick="submitTask()">Submit Task →</button>
+  </div>
+</div>
+
+<!-- PRIVACY POLICY -->
+<div id="page-privacy" class="page">
+  <div class="submit-page">
+    <h2>Privacy <em>Policy.</em></h2>
+    <p class="subtitle">Last updated July 2026</p>
+    <div style="color:var(--muted);line-height:1.9;font-size:14px;display:flex;flex-direction:column;gap:20px">
+      <p>Elevate VA ("we", "us") respects your privacy. This page explains what we collect and why.</p>
+      <div>
+        <h4 style="color:var(--cream);font-size:18px;margin-bottom:8px">What we collect</h4>
+        <p>When you submit the consultation form we collect the name, email address, chosen plan, and pain-point description you provide. When you use the client portal, any tasks you enter are stored locally in your own browser and are not transmitted to us unless you send them to us directly.</p>
+      </div>
+      <div>
+        <h4 style="color:var(--cream);font-size:18px;margin-bottom:8px">How we use it</h4>
+        <p>We use your contact details only to respond to your enquiry, match you with a virtual assistant, and deliver the services you request. We do not sell your personal information.</p>
+      </div>
+      <div>
+        <h4 style="color:var(--cream);font-size:18px;margin-bottom:8px">Third parties</h4>
+        <p>Form submissions are processed by our form provider, and payments (if you subscribe) are processed by Stripe. These providers handle your data under their own privacy policies. We use no advertising trackers on this site.</p>
+      </div>
+      <div>
+        <h4 style="color:var(--cream);font-size:18px;margin-bottom:8px">Your rights</h4>
+        <p>You can ask us to access, correct, or delete the personal data we hold about you at any time by emailing us. To clear the tasks stored in your browser, use the "Clear all" control in the portal or clear your browser storage.</p>
+      </div>
+      <div>
+        <h4 style="color:var(--cream);font-size:18px;margin-bottom:8px">Contact</h4>
+        <p>Questions about this policy? Email <a href="#" class="contact-email" style="color:var(--gold)">our team</a>.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -631,6 +687,69 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
 </div>
 
 <script>
+/* ============================================================
+   CONFIG — fill these in to take the site live.
+   Everything you need to change lives in this one object.
+   A value is treated as "not set up yet" while it still
+   contains the word REPLACE.
+   ============================================================ */
+var CONFIG = {
+  // Your real contact email (used in the footer, privacy page, and form fallbacks)
+  email: "hello@elevateva.com",
+
+  // Formspree form ID from https://formspree.io (free). Looks like "xrgkabcd".
+  // Until set, the consultation form falls back to opening the visitor's email client.
+  formspreeId: "REPLACE_FORM_ID",
+
+  // Your Cal.com (or Calendly) booking link
+  calLink: "https://cal.com/REPLACE_USERNAME",
+
+  // Founding-offer honesty controls:
+  //   foundingSpots  — real number of remaining spots. Set to null to hide the
+  //                    founding bar + "spots remain" line entirely.
+  //   foundingDeadline — real end date as "YYYY-MM-DDTHH:MM:SS". Leave "" to run a
+  //                    genuine 7-day window from each visitor's first visit (it will
+  //                    NOT reset on every page load).
+  foundingSpots: 12,
+  foundingDeadline: "",
+
+  // Stripe Payment Links (https://dashboard.stripe.com/payment-links).
+  // Until set, the pricing buttons open the consultation form instead of a dead link.
+  stripe: {
+    starter:       "https://buy.stripe.com/REPLACE_STARTER",
+    growth:        "https://buy.stripe.com/REPLACE_GROWTH",
+    exec:          "https://buy.stripe.com/REPLACE_EXEC",
+    starterAnnual: "https://buy.stripe.com/REPLACE_STARTER_ANNUAL",
+    growthAnnual:  "https://buy.stripe.com/REPLACE_GROWTH_ANNUAL",
+    execAnnual:    "https://buy.stripe.com/REPLACE_EXEC_ANNUAL"
+  }
+};
+
+function isConfigured(v) { return typeof v === 'string' && v.length > 0 && v.indexOf('REPLACE') === -1; }
+
+// Apply CONFIG to the DOM on load
+function applyConfig() {
+  // Contact email everywhere
+  document.querySelectorAll('.contact-email').forEach(function(a){ a.href = 'mailto:' + CONFIG.email; });
+  document.querySelectorAll('.footer-email').forEach(function(a){ a.textContent = CONFIG.email; });
+
+  // Book-a-call link (falls back to the consultation modal if not configured)
+  document.querySelectorAll('.book-call-link').forEach(function(a){
+    if(isConfigured(CONFIG.calLink)) { a.href = CONFIG.calLink; }
+    else { a.href = '#'; a.addEventListener('click', function(e){ e.preventDefault(); showModal(); }); }
+  });
+
+  // Founding spots (honest): populate or hide
+  if(CONFIG.foundingSpots === null || typeof CONFIG.foundingSpots === 'undefined') {
+    var bar = document.getElementById('founding-bar'); if(bar) bar.style.display = 'none';
+    document.querySelectorAll('.spots-line').forEach(function(el){ el.style.display = 'none'; });
+  } else {
+    document.querySelectorAll('.spots-count').forEach(function(el){ el.textContent = CONFIG.foundingSpots; });
+  }
+
+  updatePricingLinks();
+}
+
 // PAGE NAVIGATION
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -654,19 +773,36 @@ document.getElementById('modal').addEventListener('click', function(e){ if(e.tar
 function handleFormSubmit(e) {
   e.preventDefault();
   var form = document.getElementById('modal-form');
-  fetch(form.action, {
+  var data = new FormData(form);
+
+  // If Formspree isn't set up yet, fall back to the visitor's email client so no lead is ever lost.
+  if(!isConfigured(CONFIG.formspreeId)) {
+    var subject = encodeURIComponent('New Elevate VA enquiry — ' + (data.get('name') || ''));
+    var body = encodeURIComponent(
+      'Name: ' + (data.get('name') || '') + '\n' +
+      'Email: ' + (data.get('email') || '') + '\n' +
+      'Plan: ' + (data.get('plan') || '') + '\n' +
+      'Pain point: ' + (data.get('pain_point') || '')
+    );
+    window.location.href = 'mailto:' + CONFIG.email + '?subject=' + subject + '&body=' + body;
+    closeModal();
+    return;
+  }
+
+  fetch('https://formspree.io/f/' + CONFIG.formspreeId, {
     method: 'POST',
-    body: new FormData(form),
+    body: data,
     headers: { 'Accept': 'application/json' }
   }).then(function(r) {
     if(r.ok) {
+      form.reset();
       closeModal();
       alert('Thank you! We\'ll be in touch within 2 hours to match you with your VA.');
     } else {
-      alert('There was an issue. Please email us directly at hello@elevateva.com');
+      alert('There was an issue. Please email us directly at ' + CONFIG.email);
     }
   }).catch(function() {
-    alert('There was an issue. Please email us directly at hello@elevateva.com');
+    alert('There was an issue. Please email us directly at ' + CONFIG.email);
   });
 }
 
@@ -695,9 +831,6 @@ function toggleBilling() {
     document.getElementById('annual-starter').textContent = '✦ Save $1,764 vs monthly — founding rate';
     document.getElementById('annual-growth').textContent = '✦ Save $3,564 vs monthly — founding rate';
     document.getElementById('annual-exec').textContent = '✦ Save $5,964 vs monthly — founding rate';
-    document.getElementById('btn-starter').href = 'https://buy.stripe.com/REPLACE_STARTER_ANNUAL';
-    document.getElementById('btn-growth').href = 'https://buy.stripe.com/REPLACE_GROWTH_ANNUAL';
-    document.getElementById('btn-exec').href = 'https://buy.stripe.com/REPLACE_EXEC_ANNUAL';
   } else {
     document.getElementById('price-starter').textContent = prices.starter.monthly;
     document.getElementById('price-growth').textContent = prices.growth.monthly;
@@ -708,14 +841,52 @@ function toggleBilling() {
     document.getElementById('annual-starter').textContent = '';
     document.getElementById('annual-growth').textContent = '';
     document.getElementById('annual-exec').textContent = '';
-    document.getElementById('btn-starter').href = 'https://buy.stripe.com/REPLACE_STARTER';
-    document.getElementById('btn-growth').href = 'https://buy.stripe.com/REPLACE_GROWTH';
-    document.getElementById('btn-exec').href = 'https://buy.stripe.com/REPLACE_EXEC';
   }
+  updatePricingLinks();
 }
 
-// COUNTDOWN — 7 days from now
-var deadline = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+// Point pricing buttons at the right Stripe link, or open the consultation
+// form if that link isn't configured yet (never leave a dead checkout button).
+function updatePricingLinks() {
+  var links = isAnnual
+    ? { starter: CONFIG.stripe.starterAnnual, growth: CONFIG.stripe.growthAnnual, exec: CONFIG.stripe.execAnnual }
+    : { starter: CONFIG.stripe.starter,       growth: CONFIG.stripe.growth,       exec: CONFIG.stripe.exec };
+  ['starter','growth','exec'].forEach(function(k){
+    var btn = document.getElementById('btn-' + k);
+    if(!btn) return;
+    if(isConfigured(links[k])) {
+      btn.href = links[k];
+      btn.removeAttribute('data-unconfigured');
+    } else {
+      btn.href = '#';
+      btn.setAttribute('data-unconfigured', '1');
+    }
+  });
+}
+
+// Delegate clicks on unconfigured pricing buttons to the consultation modal
+['btn-starter','btn-growth','btn-exec'].forEach(function(id){
+  var btn = document.getElementById(id);
+  if(btn) btn.addEventListener('click', function(e){
+    if(this.getAttribute('data-unconfigured')) { e.preventDefault(); showModal(); }
+  });
+});
+
+// COUNTDOWN — honest deadline.
+// Uses CONFIG.foundingDeadline if you set one; otherwise a genuine 7-day window
+// anchored to the visitor's FIRST visit (persisted), so it doesn't fraudulently
+// reset to 7 days on every reload.
+var deadline;
+(function(){
+  if(isConfigured(CONFIG.foundingDeadline)) {
+    var d = new Date(CONFIG.foundingDeadline);
+    if(!isNaN(d.getTime())) { deadline = d; return; }
+  }
+  var stored = parseInt(localStorage.getItem('elevate_deadline') || '', 10);
+  if(stored && !isNaN(stored)) { deadline = new Date(stored); return; }
+  deadline = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+  try { localStorage.setItem('elevate_deadline', String(deadline.getTime())); } catch(e){}
+})();
 function updateCountdown() {
   var diff = deadline - Date.now();
   if(diff <= 0) { document.getElementById('founding-bar').style.display='none'; return; }
@@ -731,12 +902,64 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// TASK SUBMIT
+// TASK PORTAL — real, persisted-in-browser task list
+function getTasks() {
+  try { return JSON.parse(localStorage.getItem('elevate_tasks') || '[]'); }
+  catch(e) { return []; }
+}
+function saveTasks(tasks) {
+  try { localStorage.setItem('elevate_tasks', JSON.stringify(tasks)); } catch(e){}
+}
+
+function priorityClass(p) {
+  if(/urgent|high/i.test(p)) return 'priority-high';
+  if(/medium/i.test(p))     return 'priority-medium';
+  return 'priority-low';
+}
+
+// Render the visitor's own submitted tasks at the top of the Current Tasks panel.
+// User-supplied text is inserted via textContent only (no HTML injection).
+function renderTasks() {
+  var list = document.getElementById('task-list');
+  if(!list) return;
+  list.querySelectorAll('.task-item[data-user]').forEach(function(el){ el.remove(); });
+  var tasks = getTasks();
+  tasks.forEach(function(t){
+    var el = document.createElement('div');
+    el.className = 'task-item';
+    el.setAttribute('data-user', '1');
+    el.innerHTML = '<div class="task-status status-pending"></div>' +
+      '<div class="task-info"><div class="task-name"></div><div class="task-meta"></div></div>' +
+      '<span class="task-priority ' + priorityClass(t.priority) + '"></span>';
+    el.querySelector('.task-name').textContent = t.title;
+    el.querySelector('.task-meta').textContent = (t.cat || 'Task') + ' · Submitted ' + t.when + ' · Awaiting VA';
+    el.querySelector('.task-priority').textContent = (t.priority.split('—')[0] || 'New').trim();
+    list.insertBefore(el, list.firstChild);
+  });
+  // Keep the "Active Tasks" stat honest relative to what the visitor has entered
+  var activeStat = document.querySelector('.dash-stat-num');
+  if(activeStat) activeStat.textContent = tasks.length;
+}
+
+function clearTasks() {
+  saveTasks([]);
+  renderTasks();
+}
+
 function submitTask() {
   var title = document.getElementById('task-title').value.trim();
   var cat = document.getElementById('task-cat').value;
   var desc = document.getElementById('task-desc').value.trim();
+  var priority = (document.getElementById('task-priority') || {}).value || 'Medium';
   if(!title || !cat || !desc) { alert('Please fill in the title, category, and description.'); return; }
+
+  var now = new Date();
+  var when = now.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+  var tasks = getTasks();
+  tasks.unshift({ title: title, cat: cat, desc: desc, priority: priority, when: when, ts: now.getTime() });
+  saveTasks(tasks);
+  renderTasks();
+
   var banner = document.getElementById('success-banner');
   banner.classList.add('show');
   document.getElementById('task-title').value = '';
@@ -745,6 +968,10 @@ function submitTask() {
   window.scrollTo(0,0);
   setTimeout(function(){ banner.classList.remove('show'); }, 6000);
 }
+
+// INIT
+applyConfig();
+renderTasks();
 </script>
 </body>
 </html>
