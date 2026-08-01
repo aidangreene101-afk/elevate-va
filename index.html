@@ -27,11 +27,6 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif}
 .founding-text{font-size:13px;letter-spacing:1px;color:var(--cream)}
 .founding-text strong{color:var(--gold)}
 .founding-spots{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);padding:4px 14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
-#countdown{display:flex;gap:12px;align-items:center}
-.cd-unit{text-align:center}
-.cd-num{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold);line-height:1}
-.cd-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.cd-sep{font-size:18px;color:var(--border);margin-bottom:10px}
 .founding-cta{background:var(--gold);color:var(--ink);border:none;padding:8px 20px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;font-weight:500;white-space:nowrap}
 .founding-cta:hover{background:var(--gold-light)}
 
@@ -229,16 +224,7 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
 <div id="founding-bar">
   <div class="founding-inner">
     <span class="founding-spots">⚡ Founding Offer</span>
-    <span class="founding-text"><strong>12 founding spots remaining</strong> — lock in 50% off annual pricing, forever</span>
-    <div id="countdown">
-      <div class="cd-unit"><div class="cd-num" id="cd-d">06</div><div class="cd-label">days</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-unit"><div class="cd-num" id="cd-h">23</div><div class="cd-label">hrs</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-unit"><div class="cd-num" id="cd-m">41</div><div class="cd-label">min</div></div>
-      <div class="cd-sep">:</div>
-      <div class="cd-unit"><div class="cd-num" id="cd-s">09</div><div class="cd-label">sec</div></div>
-    </div>
+    <span class="founding-text"><strong>We're launching — the first 20 annual clients</strong> lock in 50% off, forever</span>
     <button class="founding-cta" onclick="showModal()">Claim Spot →</button>
   </div>
 </div>
@@ -249,7 +235,7 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
     <a onclick="showPage('landing')" id="nav-landing" class="active">Home</a>
     <a onclick="showPage('services-detail')" id="nav-services-detail">Services</a>
     <a onclick="scrollToPricing()" id="nav-pricing">Pricing</a>
-    <a onclick="showPage('dashboard')" id="nav-dashboard">My Portal</a>
+    <a onclick="showPage('dashboard')" id="nav-dashboard">Portal Preview</a>
   </div>
   <button class="nav-cta" onclick="showModal()">Get Started</button>
 </nav>
@@ -263,20 +249,17 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
     <p>Elevate VA pairs you with elite virtual assistants who handle the work that keeps you from what matters most — growing your business.</p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="showModal()">Claim Founding Rate →</button>
-      <button class="btn-outline" onclick="showPage('dashboard')">See Client Portal</button>
+      <button class="btn-outline" onclick="showPage('dashboard')">Preview the Client Portal</button>
     </div>
     <div class="social-proof">
-      <div class="sp-avatars">
-        <span>S</span><span>J</span><span>R</span><span>D</span><span>M</span>
-      </div>
-      <span class="sp-text">Joined by <strong>200+ founders</strong> this month</span>
+      <span class="sp-text">Founder-led · <strong>Your first 2 hours are free</strong> · No credit card to start</span>
     </div>
   </div>
 
   <div class="stats">
-    <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Hours saved monthly</div></div>
-    <div class="stat"><div class="stat-num">98%</div><div class="stat-label">Client satisfaction</div></div>
-    <div class="stat"><div class="stat-num">2h</div><div class="stat-label">Average first response</div></div>
+    <div class="stat"><div class="stat-num">24h</div><div class="stat-label">From signup to matched VA</div></div>
+    <div class="stat"><div class="stat-num">2 hrs</div><div class="stat-label">Free trial work, on us</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-label">Long-term contracts</div></div>
   </div>
 
   <!-- HOW IT WORKS -->
@@ -365,8 +348,7 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
           <li>Social media management</li>
           <li>Priority support</li>
         </ul>
-        <!-- REPLACE XXXXX with your Stripe payment link ID -->
-        <a href="https://buy.stripe.com/REPLACE_STARTER" class="price-btn" id="btn-starter" target="_blank">Get Started</a>
+        <a href="#" class="price-btn" id="btn-starter">Get Started</a>
       </div>
 
       <div class="price-card featured">
@@ -384,7 +366,7 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
           <li class="included">Priority support</li>
           <li>Executive-level tasks</li>
         </ul>
-        <a href="https://buy.stripe.com/REPLACE_GROWTH" class="price-btn" id="btn-growth" target="_blank">Get Started</a>
+        <a href="#" class="price-btn" id="btn-growth">Get Started</a>
       </div>
 
       <div class="price-card">
@@ -401,7 +383,7 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
           <li class="included">Direct phone access</li>
           <li class="included">Monthly strategy call</li>
         </ul>
-        <a href="https://buy.stripe.com/REPLACE_EXEC" class="price-btn" id="btn-exec" target="_blank">Get Started</a>
+        <a href="#" class="price-btn" id="btn-exec">Get Started</a>
       </div>
     </div>
 
@@ -409,8 +391,8 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
     <div class="founding-deal">
       <div>
         <h3>The <em>founding member</em> opportunity.</h3>
-        <p style="margin-top:16px">We're in our launch week. The first 20 clients who commit to an annual plan lock in 50% off — not just today, but every year they stay. This price never goes up for you.</p>
-        <p style="margin-top:12px;font-size:13px;color:rgba(107,107,117,0.7)">12 founding spots remain as of today.</p>
+        <p style="margin-top:16px">We just launched. The first 20 clients who commit to an annual plan lock in 50% off — not just today, but every year they stay. This price never goes up for you.</p>
+        <p style="margin-top:12px;font-size:13px;color:rgba(107,107,117,0.7)">All 20 founding spots are open — you'd be among our very first clients.</p>
         <button class="btn-primary" style="margin-top:28px" onclick="toggleBilling();document.getElementById('pricing-section').scrollIntoView({behavior:'smooth'})">Show Founding Prices →</button>
       </div>
       <div class="founding-perks">
@@ -423,30 +405,30 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
     </div>
   </div>
 
-  <!-- TESTIMONIALS -->
+  <!-- WHY TRUST US -->
   <div class="section">
-    <div class="section-label">Client stories</div>
-    <div class="section-title">Real results from<br>real <em>businesses.</em></div>
+    <div class="section-label">Straight talk</div>
+    <div class="section-title">We're new. Here's why<br>that works <em>for you.</em></div>
     <div class="testi-grid">
       <div class="testi-card">
-        <div class="testi-text">"I was drowning in admin work and couldn't focus on sales. Within one week my VA had cleared my backlog, set up inbox filters, and I got 8 hours back immediately."</div>
-        <div class="testi-author">Marcus T.</div>
-        <div class="testi-role">SaaS Founder · Executive Plan</div>
+        <div class="testi-text">"You work directly with the founder — not a ticket queue. Every task that comes in this year crosses my desk personally."</div>
+        <div class="testi-author">Founder-led service</div>
+        <div class="testi-role">Direct line, no layers</div>
       </div>
       <div class="testi-card">
-        <div class="testi-text">"Honestly thought VA services were a luxury. Three months in — I've launched two new products because I had actual time to think. Worth every dollar."</div>
-        <div class="testi-author">Rachel N.</div>
-        <div class="testi-role">Independent Consultant · Executive Plan</div>
+        <div class="testi-text">"Your first 2 hours cost nothing. Hand us a real task from your backlog and judge the output before a dollar changes hands."</div>
+        <div class="testi-author">Prove-it-first trial</div>
+        <div class="testi-role">No credit card required</div>
       </div>
       <div class="testi-card">
-        <div class="testi-text">"My Etsy shop doubled in revenue after my VA took over listings and customer service. I just focus on creating now. Best business decision I've made."</div>
-        <div class="testi-author">Jade L.</div>
-        <div class="testi-role">E-commerce Seller · Starter Plan</div>
+        <div class="testi-text">"If a month ever doesn't deliver, say so and we'll refund it. We'd rather lose a month of revenue than keep an unhappy client."</div>
+        <div class="testi-author">Money-back guarantee</div>
+        <div class="testi-role">Any month, no interrogation</div>
       </div>
       <div class="testi-card">
-        <div class="testi-text">"Professional, fast, and they just get it. Submitted a task on Friday evening, completed by Saturday morning. This is what premium service actually looks like."</div>
-        <div class="testi-author">David K.</div>
-        <div class="testi-role">Real Estate Agent · Growth Plan</div>
+        <div class="testi-text">"Founding clients get our best pricing forever precisely because they're taking a chance on us early. That trade is the whole deal."</div>
+        <div class="testi-author">Founding rate, locked</div>
+        <div class="testi-role">50% off annual — never increases</div>
       </div>
     </div>
   </div>
@@ -457,16 +439,16 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
     <h2 style="font-size:clamp(40px,5vw,64px);font-weight:300;margin:16px 0">Stop doing work<br>someone else <em>can.</em></h2>
     <p style="color:var(--muted);max-width:480px;margin:0 auto 40px;font-size:15px;line-height:1.8">Your first 2 hours are on us. No commitment, no credit card required to start. Just tell us what's on your plate.</p>
     <button class="btn-primary" style="font-size:14px;padding:18px 52px" onclick="showModal()">Book Free Consultation →</button>
-    <p style="font-size:12px;color:var(--muted);margin-top:16px">VA matched within 24 hours · Cancel anytime · Founding rate available this week only</p>
+    <p style="font-size:12px;color:var(--muted);margin-top:16px">VA matched within 24 hours · Cancel anytime · Founding rate for our first 20 annual clients</p>
   </div>
 
   <footer>
     <div class="footer-logo">ELEVATE VA</div>
     <div class="footer-links">
-      <a href="mailto:hello@elevateva.com">hello@elevateva.com</a>
-      <!-- Replace with your Cal.com link -->
-      <a href="https://cal.com/REPLACE_USERNAME" target="_blank">Book a Call</a>
-      <a href="#">Privacy</a>
+      <a href="#" id="contact-email-link">Email us</a>
+      <a href="#" id="cal-link" target="_blank" style="display:none">Book a Call</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
     </div>
     <div class="footer-copy">© 2026 Elevate VA · All rights reserved</div>
   </footer>
@@ -504,6 +486,7 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
       <div>
         <h2>Good morning, <span>Sarah.</span></h2>
         <p style="color:var(--muted);font-size:13px;margin-top:4px">Growth Plan · 14 of 25 hours used this month</p>
+        <p style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:8px;border:1px solid rgba(201,168,76,0.3);display:inline-block;padding:4px 10px">Demo preview — sample data showing what your portal will look like</p>
       </div>
       <button class="new-task-btn" onclick="showPage('submit')">+ Submit New Task</button>
     </div>
@@ -599,10 +582,9 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
     <h3>Start your <em>journey.</em></h3>
-    <p>Enter your details and we'll match you with your dedicated VA within 24 hours. Founding pricing available this week only.</p>
+    <p>Enter your details and we'll match you with your dedicated VA within 24 hours. Founding pricing is available to our first 20 annual clients.</p>
     <div class="modal-founding">⚡ You qualify for founding member pricing — 50% off annual plans, locked in forever.</div>
-    <!-- REPLACE with your Formspree form ID: https://formspree.io (free) -->
-    <form action="https://formspree.io/f/REPLACE_FORM_ID" method="POST" id="modal-form" onsubmit="handleFormSubmit(event)">
+    <form action="#" method="POST" id="modal-form" onsubmit="handleFormSubmit(event)">
       <div class="form-group">
         <label class="form-label">Full Name</label>
         <input class="form-input" type="text" name="name" placeholder="Jane Smith" required>
@@ -631,6 +613,24 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;justify
 </div>
 
 <script>
+// ================== SETUP — paste your real links here ==================
+// 1) STRIPE: create 6 Payment Links at dashboard.stripe.com (3 monthly, 3 annual)
+//    and paste the full URLs below, e.g. 'https://buy.stripe.com/abc123xyz'.
+// 2) CAL.COM: paste your booking page URL, e.g. 'https://cal.com/elevate-va/intro'.
+// 3) FORMSPREE: create a free form at formspree.io, paste its ID, e.g. 'mdoqkzzw'.
+// Anything left empty degrades gracefully: checkout buttons open the consultation
+// form instead of a dead link, and the form falls back to plain email.
+var CONFIG = {
+  stripe: {
+    starter: '', growth: '', exec: '',
+    starterAnnual: '', growthAnnual: '', execAnnual: ''
+  },
+  calLink: '',
+  formspreeId: '',
+  contactEmail: 'elevate.va.2@gmail.com'
+};
+// ========================================================================
+
 // PAGE NAVIGATION
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -654,6 +654,17 @@ document.getElementById('modal').addEventListener('click', function(e){ if(e.tar
 function handleFormSubmit(e) {
   e.preventDefault();
   var form = document.getElementById('modal-form');
+  if(!CONFIG.formspreeId) {
+    // No form backend configured yet — fall back to a pre-filled email
+    var name = form.elements['name'].value, email = form.elements['email'].value,
+        plan = form.elements['plan'].value, pain = form.elements['pain_point'].value;
+    window.location.href = 'mailto:' + CONFIG.contactEmail +
+      '?subject=' + encodeURIComponent('New Elevate VA Lead — ' + name) +
+      '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPlan: ' + plan + '\nBiggest pain point: ' + pain);
+    closeModal();
+    return;
+  }
+  form.action = 'https://formspree.io/f/' + CONFIG.formspreeId;
   fetch(form.action, {
     method: 'POST',
     body: new FormData(form),
@@ -661,12 +672,12 @@ function handleFormSubmit(e) {
   }).then(function(r) {
     if(r.ok) {
       closeModal();
-      alert('Thank you! We\'ll be in touch within 2 hours to match you with your VA.');
+      alert('Thank you! We\'ll be in touch within 24 hours to match you with your VA.');
     } else {
-      alert('There was an issue. Please email us directly at hello@elevateva.com');
+      alert('There was an issue. Please email us directly at ' + CONFIG.contactEmail);
     }
   }).catch(function() {
-    alert('There was an issue. Please email us directly at hello@elevateva.com');
+    alert('There was an issue. Please email us directly at ' + CONFIG.contactEmail);
   });
 }
 
@@ -695,9 +706,6 @@ function toggleBilling() {
     document.getElementById('annual-starter').textContent = '✦ Save $1,764 vs monthly — founding rate';
     document.getElementById('annual-growth').textContent = '✦ Save $3,564 vs monthly — founding rate';
     document.getElementById('annual-exec').textContent = '✦ Save $5,964 vs monthly — founding rate';
-    document.getElementById('btn-starter').href = 'https://buy.stripe.com/REPLACE_STARTER_ANNUAL';
-    document.getElementById('btn-growth').href = 'https://buy.stripe.com/REPLACE_GROWTH_ANNUAL';
-    document.getElementById('btn-exec').href = 'https://buy.stripe.com/REPLACE_EXEC_ANNUAL';
   } else {
     document.getElementById('price-starter').textContent = prices.starter.monthly;
     document.getElementById('price-growth').textContent = prices.growth.monthly;
@@ -708,28 +716,38 @@ function toggleBilling() {
     document.getElementById('annual-starter').textContent = '';
     document.getElementById('annual-growth').textContent = '';
     document.getElementById('annual-exec').textContent = '';
-    document.getElementById('btn-starter').href = 'https://buy.stripe.com/REPLACE_STARTER';
-    document.getElementById('btn-growth').href = 'https://buy.stripe.com/REPLACE_GROWTH';
-    document.getElementById('btn-exec').href = 'https://buy.stripe.com/REPLACE_EXEC';
   }
+  wireCheckoutButtons();
 }
 
-// COUNTDOWN — 7 days from now
-var deadline = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
-function updateCountdown() {
-  var diff = deadline - Date.now();
-  if(diff <= 0) { document.getElementById('founding-bar').style.display='none'; return; }
-  var d = Math.floor(diff / 86400000);
-  var h = Math.floor((diff % 86400000) / 3600000);
-  var m = Math.floor((diff % 3600000) / 60000);
-  var s = Math.floor((diff % 60000) / 1000);
-  document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
-  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+// CHECKOUT BUTTONS — use Stripe links from CONFIG; fall back to consult modal
+function wireCheckoutButtons() {
+  var map = isAnnual
+    ? { 'btn-starter': CONFIG.stripe.starterAnnual, 'btn-growth': CONFIG.stripe.growthAnnual, 'btn-exec': CONFIG.stripe.execAnnual }
+    : { 'btn-starter': CONFIG.stripe.starter, 'btn-growth': CONFIG.stripe.growth, 'btn-exec': CONFIG.stripe.exec };
+  Object.keys(map).forEach(function(id) {
+    var btn = document.getElementById(id);
+    if(map[id]) {
+      btn.href = map[id];
+      btn.target = '_blank';
+      btn.onclick = null;
+    } else {
+      btn.href = '#';
+      btn.removeAttribute('target');
+      btn.onclick = function(ev) { ev.preventDefault(); showModal(); };
+    }
+  });
 }
-updateCountdown();
-setInterval(updateCountdown, 1000);
+
+// WIRE CONFIG-DRIVEN LINKS ON LOAD
+wireCheckoutButtons();
+(function() {
+  var calEl = document.getElementById('cal-link');
+  if(CONFIG.calLink) { calEl.href = CONFIG.calLink; calEl.style.display = ''; }
+  var emailEl = document.getElementById('contact-email-link');
+  emailEl.href = 'mailto:' + CONFIG.contactEmail;
+  emailEl.textContent = CONFIG.contactEmail;
+})();
 
 // TASK SUBMIT
 function submitTask() {
